@@ -18,7 +18,7 @@ const ResponsiveAppBar = () => {
           <Button color="inherit" href='/walk'>Token Info</Button>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             
-              <Button sx={{ color: '#fff' }} href='/personal'>
+              <Button sx={{ color: '#fff' }} href='/manageTokens'>
                 Your Account
               </Button>
           </Box>

@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import Walk from "../pages/Walk";
 import Home from "../pages/Home";
 import StravaRedirect from "../pages/StravaRedirect";
 import YourDistance from "../pages/YourDistance";
 import About from '../pages/About'
+import Personal from '../pages/ManageTokens'
 
 import Layout from "../utils/Layout";
 
@@ -19,7 +20,8 @@ class AppRouter extends React.Component {
                         <Route path="/redirect" component={StravaRedirect} />
                         <Route path="/yourdistance" component={YourDistance} />
                         <Route path="/about" component={About} />
-
+                        <Route path='/walk' component={Walk} />
+                        <Route path='/manageTokens' component={Personal} />
                     </Switch>
                     </Layout>
                 </div>
