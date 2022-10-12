@@ -96,6 +96,10 @@ contract wmbToken is IERC20 {
         emit Transfer(msg.sender, address(0), amount);
     }
 
+    function setPersonName(string calldata person) external {
+        personName[msg.sender] = person;
+    }
+
     function setStravaInfo(string calldata user, string calldata pword) external {
         stravaID[msg.sender] = user;
         stravaSecret[msg.sender] = pword;

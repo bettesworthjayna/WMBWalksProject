@@ -16,7 +16,8 @@ class Walk extends Component {
         kmToWMB: 0,
         myBalance: 0,
         errorMessage: '', 
-        loading: false
+        loading: false, 
+        firstName: ''
     }
     async componentDidMount() {
         const name = await token.methods.name().call();
@@ -24,7 +25,8 @@ class Walk extends Component {
         const totalSupply = await token.methods.totalSupply().call();
         const accounts = await web3.eth.getAccounts();
         const myBalance = await token.methods.balanceOf(accounts[0]).call();
-        this.setState({name, symbol, totalSupply, myBalance: myBalance/100});
+        const firstName = await token.methods.personName(accounts[0]).call();
+        this.setState({name, symbol, totalSupply, myBalance: myBalance/100, firstName});
     }
 
     onSubmit = async (event) => {
@@ -47,24 +49,27 @@ class Walk extends Component {
         //window.location.reload(false);
       };
 
+      
+
     render () {
         return (
             <div>
-                <h1>New Page</h1>
+                <h1>{this.state.firstName || "Your" } Account:</h1>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
                 <h3>Your Total Supply: {this.state.myBalance}</h3>
+                <br/>
                 <form onSubmit={this.onSubmit}>
-                    <h4>Want to enter?</h4>
                     <div>
-                    <label>How Many km did you walk?</label>
+                    <h4>How Many km did you walk?</h4>
                     <input 
                         label="km"
                         value= {this.state.km}
                         onChange={event => this.setState({km: (event.target.value)})}
                     />
                     </div>
+                    <br/>
                     <LoadingButton type="submit" loading={this.state.loading} variant="outlined">
                         Submit
                     </LoadingButton>

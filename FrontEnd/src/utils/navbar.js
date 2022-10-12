@@ -12,7 +12,7 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
           <Button color="inherit" href='/'>Home</Button>
-          <Button color="inherit" href='/about'>About WMB Walks</Button>
+          <Button color="inherit" href='/about'>About</Button>
           <Button color="inherit" href='/walk'>Token Info</Button>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             

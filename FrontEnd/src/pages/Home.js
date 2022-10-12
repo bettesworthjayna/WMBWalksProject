@@ -23,6 +23,7 @@ class WMBIndex extends Component {
                 <h1>WMB Walks</h1>
                 <hr/>
                <p>Connect your MetaMask account to access your tokens and progress on this application</p>
+               <p>Sign up and record walks or runs to earn tokens</p>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>

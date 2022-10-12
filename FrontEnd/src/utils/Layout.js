@@ -6,7 +6,9 @@ const Layout = (props) => {
         <div>
             <ResponsiveAppBar />
             {props.children}
+            <br/>
             <hr />
+            <hr/>
         </div>
     )
 };
