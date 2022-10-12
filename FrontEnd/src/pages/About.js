@@ -13,6 +13,12 @@ class About extends Component{
                     The NFTs set specific goals for you to cash in on at WMB. the 100km NFT gives you a free water bottle. The 500 km nft gives you free WMV comfy socks
                     the 100km nft gives you a free lunch! The more you walk, the more you get!! 
                 </p>
+
+                <h3>What you need</h3>
+                <ul> 
+                    <li>Metamask Account: Connect your metamask account or create one as an app or browser extension</li>
+                    <li>Strava Account: Sign in or sign up for strava. This will get you the ability to mine for tokens</li>
+                </ul>
             </div>
             
         )

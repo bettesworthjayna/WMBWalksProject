@@ -4,7 +4,6 @@ import Walk100 from '../images/wmb100.PNG';
 import Walk500 from '../images/wmb500.PNG';
 import Walk1000 from '../images/wmb1000.PNG';
 import Walk10000 from '../images/wmb10000.PNG';
-import { handleLogin } from "../utils/handleLogin";
 
 class WMBIndex extends Component {
     state = {
@@ -50,9 +49,7 @@ class WMBIndex extends Component {
                         <p>Win a vacation day</p>
                         <img  src={Walk10000}  alt="walk 10000" />
                     </div>
-                </div>
-                <button onClick={handleLogin}>Connect with Strava</button>
-                
+                </div>               
 
             </div>
 
@@ -61,20 +58,3 @@ class WMBIndex extends Component {
 
 }
 export default WMBIndex;
-
-
-
-// import React from "react";
-
-// import { handleLogin } from "../utils/handleLogin";
-
-// const Home = () => {
-//     return (
-//         <div>
-//             <h1>Home</h1>
-//             <button onClick={handleLogin}>Connect with Strava</button>
-//         </div>
-//     );
-// };
-
-// export default Home;
