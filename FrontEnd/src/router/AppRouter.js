@@ -5,8 +5,8 @@ import Home from "../pages/Home";
 import StravaRedirect from "../pages/StravaRedirect";
 import YourDistance from "../pages/YourDistance";
 import About from '../pages/About'
-import Personal from '../pages/ManageTokens'
-
+import Personal from '../pages/ManageTokens';
+import Tutorials from "../pages/Tutorials";
 import Layout from "../utils/Layout";
 
 class AppRouter extends React.Component {
@@ -22,6 +22,7 @@ class AppRouter extends React.Component {
                         <Route path="/about" component={About} />
                         <Route path='/walk' component={Walk} />
                         <Route path='/manageTokens' component={Personal} />
+                        <Route path='/tutorials' component={Tutorials} />
                     </Switch>
                     </Layout>
                 </div>

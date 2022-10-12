@@ -21,6 +21,7 @@ const ResponsiveAppBar = () => {
               </Button>
           </Box>
           <Button color="inherit" href='/yourDistance'>Strava Info</Button>
+          <Button color="inherit" href='/tutorials'>Tutorials</Button>
         </Toolbar>
       </Container>
     </AppBar>
