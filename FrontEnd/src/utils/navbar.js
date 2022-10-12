@@ -4,11 +4,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { indigo } from '@mui/material/colors';
 
 
 const ResponsiveAppBar = () => {
- const navCol = indigo[900];
   return (
     <AppBar position="static" style={{ background: '#303f9f' }}>
       <Container maxWidth="xl" >

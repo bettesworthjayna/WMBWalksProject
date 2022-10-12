@@ -1,7 +1,7 @@
 import React from 'react';
 import ResponsiveAppBar from './navbar';
 
-export default props => {
+const Layout = (props) => {
     return (
         <div>
             <ResponsiveAppBar />
@@ -10,3 +10,4 @@ export default props => {
         </div>
     )
 };
+export default Layout;
