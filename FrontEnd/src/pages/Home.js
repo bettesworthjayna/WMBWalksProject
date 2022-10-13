@@ -24,7 +24,7 @@ class WMBIndex extends Component {
                 <hr/>
                <p>Connect your MetaMask account to access your tokens and progress on this application</p>
                <p>Sign up and record walks or runs to earn tokens</p>
-               <a> Need Help with these tasks? </a>
+               <p> Need Help with these tasks? </p>
                <a href="/tutorials">Head to tutorials: </a>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
@@ -35,22 +35,22 @@ class WMBIndex extends Component {
                     <div>
                         <p>Walk 100 km total:</p>
                         <p>Win a free waterbottle</p>
-                        <img  src={Walk100}  alt="walk 100" />
+                        <img  src={Walk100} height='200' alt="walk 100" />
                     </div>
                     <div>
                         <p>Walk 500 km total:</p>
                         <p>Win a pair of comfy socks</p>
-                        <img  src={Walk500}  alt="walk 500" />
+                        <img  src={Walk500} height='220' alt="walk 500" />
                     </div>
                     <div>
                         <p>Walk 1000 km total:</p>
                         <p>Win a free lunch</p>
-                        <img  src={Walk1000}  alt="walk 1000" />
+                        <img  src={Walk1000} height='200' alt="walk 1000" />
                     </div>
                     <div>
                         <p>Walk 10,000 km total:</p>
                         <p>Win a vacation day</p>
-                        <img  src={Walk10000}  alt="walk 10000" />
+                        <img  src={Walk10000} height='210' alt="walk 10000" />
                     </div>
                 </div>               
 

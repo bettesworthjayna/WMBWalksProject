@@ -1,14 +1,22 @@
 import React from 'react';
 import ResponsiveAppBar from './navbar';
+import Paper from '@mui/material/Paper';
+import Container from '@mui/material/Container';
+
+
 
 const Layout = (props) => {
     return (
         <div>
             <ResponsiveAppBar />
-            {props.children}
+            <Paper elevation={1}>
+                <Container maxWidth="xl">
+                    {props.children}
+                    <br/>
+                </Container>
+            </Paper>
             <br/>
-            <hr />
-            <hr/>
+
         </div>
     )
 };
