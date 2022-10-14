@@ -4,7 +4,7 @@ import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
 import RewardNFT from '../utils/rewardNFT';
-
+import {errorHandle} from '../utils/errorMessageHandle'
 
 class Personal extends Component {
     state = {
@@ -93,6 +93,8 @@ class Personal extends Component {
                 <hr/>
                 <h2>Manage your WMB tokens: </h2>
                 <br/>
+                { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
+                <br />
                 <form>
                 <label>Enter Amount of WMB</label>
                     <input 
@@ -153,10 +155,7 @@ class Personal extends Component {
                         Submit
                     </LoadingButton>
                 </form>
-                { this.state.errorMessage && <Alert severity='error'> { this.state.errorMessage } </Alert> }
-           </div>
-           
-           
+           </div> 
         )
     }
 }

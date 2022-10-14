@@ -3,6 +3,7 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
+import {errorHandle} from '../utils/errorMessageHandle'
 
 
 
@@ -70,11 +71,11 @@ class Walk extends Component {
                     />
                     </div>
                     <br/>
-                    <LoadingButton type="submit" loading={this.state.loading} variant="outlined">
+                    <LoadingButton type="submit" loading={this.state.loading} variant="outlined" loadingPosition="start">
                         Submit
                     </LoadingButton>
                 </form>
-                { this.state.errorMessage && <Alert severity='error'> { this.state.errorMessage } </Alert> }
+                { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
             </div>
         )
     }
