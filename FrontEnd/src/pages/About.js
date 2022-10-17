@@ -19,6 +19,7 @@ class About extends Component{
                     <li>Metamask Account: Connect your metamask account or create one as an app or browser extension</li>
                     <li>Strava Account: Sign in or sign up for strava. This will get you the ability to mine for tokens</li>
                 </ul>
+                <h5>Tutorials for how to do this are located in the tutorials tab</h5>
             </div>
             
         )

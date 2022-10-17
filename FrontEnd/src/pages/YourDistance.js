@@ -15,21 +15,12 @@ const YourDistance =  (props) => {
                     setReturnMessage (await mineTokens(Math.floor(props.user.data.all_run_totals.distance / 10)));
                 }catch(err){
                     console.log(err);
-                    console.log("!!!!!!!");
                 }
             }
             
             fetchData();
-            console.log(runWalkDistance + "hi there")
         }, []);
-    console.log(runWalkDistance + '   !!')
-    try{
-
-        // const runWalkDistance = Math.floor(props.user.data.all_run_totals.distance / 10)/100;
-        // useEffect(async () => {
-        //     returnMessage = await mineTokens(runWalkDistance);
-        // }, []);
-        
+    try{     
         
 
     return (
@@ -40,6 +31,7 @@ const YourDistance =  (props) => {
             <h2>Bike ride total distance: {props.user.data.all_ride_totals.distance}</h2>
             <h2>Swimming total distance: {props.user.data.all_swim_totals.distance}</h2>
             <h3>{returnMessage}</h3>
+            <a href="/walk">Go back to Walk Page!</a>
         </div>
        
     );

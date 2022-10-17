@@ -13,14 +13,13 @@ const ResponsiveAppBar = () => {
         <Toolbar disableGutters >
           <Button color="inherit" href='/'>Home</Button>
           <Button color="inherit" href='/about'>About</Button>
-          <Button color="inherit" href='/walk'>Token Info</Button>
+          <Button color="inherit" href='/walk'>Account</Button>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             
               <Button sx={{ color: '#fff' }} href='/manageTokens'>
                 Your Account
               </Button>
           </Box>
-          <Button color="inherit" href='/yourDistance'>Strava Info</Button>
           <Button color="inherit" href='/tutorials'>Tutorials</Button>
         </Toolbar>
       </Container>
