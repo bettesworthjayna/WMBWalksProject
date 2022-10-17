@@ -3,7 +3,8 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
-import {errorHandle} from '../utils/errorMessageHandle'
+import {errorHandle} from '../utils/errorMessageHandle';
+
 
 
 
@@ -34,7 +35,6 @@ class Walk extends Component {
         event.preventDefault();
         this.setState({kmToWMB: this.state.km * 100})
         this.setState({loading: true, errorMessage: ''});
-
         try{
             const accounts = await web3.eth.getAccounts();
              //tells users what is going on since it takes time to make a transaction
@@ -50,12 +50,28 @@ class Walk extends Component {
         //window.location.reload(false);
       };
 
-      
+      onNameSubmit = async (event) => {
+        event.preventDefault();
+        this.setState({loading: true, errorMessage: ''});
+        try{
+            const accounts = await web3.eth.getAccounts();
+             //tells users what is going on since it takes time to make a transaction
+        
+            await token.methods.setPersonName(this.state.firstName).send({
+                from: accounts[0],
+            }); //this takes 15 - 30 sec
+        }catch (err) {
+            this.setState({errorMessage: err.message})
+        }
+
+        this.setState({loading: false});
+        //window.location.reload(false);
+      };
 
     render () {
         return (
             <div>
-                <h1>{this.state.firstName || "Your" } Account:</h1>
+                <h1>{this.state.firstName|| "Your" } Account:</h1>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
@@ -68,6 +84,20 @@ class Walk extends Component {
                         label="km"
                         value= {this.state.km}
                         onChange={event => this.setState({km: (event.target.value)})}
+                    />
+                    </div>
+                    <br/>
+                    <LoadingButton type="submit" loading={this.state.loading} variant="outlined" loadingPosition="start">
+                        Submit
+                    </LoadingButton>
+                </form>
+                <form onSubmit={this.onNameSubmit}>
+                    <div>
+                    <h4>How Many km did you walk?</h4>
+                    <input 
+                        label="km"
+                        value= {this.state.firstName}
+                        onChange={event => this.setState({firstName: (event.target.value)})}
                     />
                     </div>
                     <br/>

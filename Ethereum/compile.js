@@ -5,7 +5,7 @@ const fs = require("fs-extra");
 const buildPath = path.resolve(__dirname, "build");
 fs.removeSync(buildPath);
  
-const tokenPath = path.resolve(__dirname, "contracts", "wmbToken.sol");
+const tokenPath = path.resolve(__dirname, "Contract", "wmbWalks.sol");
 const source = fs.readFileSync(tokenPath, "utf8");
  
 const input = {
