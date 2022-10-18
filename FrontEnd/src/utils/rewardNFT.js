@@ -36,26 +36,26 @@ const  RewardNFT =  () => {
         if(has500){
             if(has1000){
                 return (<div>
-                    <div style={{display: 'flex'}}>
+                    <div style={{display: 'flex', flexWrap: 'wrap' }}>
                         <div>
-                            <img src={Walk100} alt="walk"/>
+                            <img src={Walk100} alt="walk" height='200'/>
                         </div>
                         <div>
-                            <img src={Walk500} alt="walk"/>
+                            <img src={Walk500} alt="walk" height='220'/>
                         </div>
                         <div>
-                            <img src={Walk1000} alt="walk"/>
+                            <img src={Walk1000} alt="walk" height='200'/>
                         </div>
                     </div>
                 </div>)
             }
             return(<div>
-               <div style={{display: 'flex'}}>
+               <div style={{display: 'flex', flexWrap: 'wrap'}}>
                         <div>
-                            <img src={Walk100} alt="walk"/>
+                            <img src={Walk100} alt="walk" height='200'/>
                         </div>
                         <div>
-                            <img src={Walk500} alt="walk"/>
+                            <img src={Walk500} alt="walk" height='220'/>
                         </div>
                         
                     </div>
@@ -63,7 +63,7 @@ const  RewardNFT =  () => {
         }
         return (
             <div>
-                <img src={Walk100} alt="walk"/>
+                <img src={Walk100} alt="walk" height='200'/>
             </div>
         )
     }else{

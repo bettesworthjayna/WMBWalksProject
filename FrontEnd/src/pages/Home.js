@@ -33,24 +33,32 @@ class WMBIndex extends Component {
                 <h2>Potential Awards</h2>
                 <div style={{display: 'flex', flexWrap: 'wrap'}}>
                     <div>
+                        <hr/>
                         <p>Walk 100 km total:</p>
                         <p>Win a free waterbottle</p>
                         <img  src={Walk100} height='200' alt="walk 100" />
+                        
                     </div>
                     <div>
+                        <hr/>
                         <p>Walk 500 km total:</p>
                         <p>Win a pair of comfy socks</p>
                         <img  src={Walk500} height='220' alt="walk 500" />
+                        
                     </div>
                     <div>
+                        <hr/>
                         <p>Walk 1000 km total:</p>
                         <p>Win a free lunch</p>
                         <img  src={Walk1000} height='200' alt="walk 1000" />
+                       
                     </div>
                     <div>
+                        <hr/>
                         <p>Walk 10,000 km total:</p>
                         <p>Win a vacation day</p>
                         <img  src={Walk10000} height='210' alt="walk 10000" />
+                        
                     </div>
                 </div>               
 
