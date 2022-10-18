@@ -5,7 +5,7 @@ import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
 import {errorHandle} from '../utils/errorMessageHandle';
 import {handleLogin} from '../utils/handleLogin';
-
+import RewardNFT from '../utils/rewardNFT';
 
 
 class Walk extends Component {
@@ -99,6 +99,8 @@ class Walk extends Component {
                     </LoadingButton>
                 </form>
                 { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
+                <h2>Your Tokens:</h2>
+                <RewardNFT/>
             </div>
         )
     }

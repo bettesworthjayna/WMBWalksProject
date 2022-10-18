@@ -31,7 +31,7 @@ class WMBIndex extends Component {
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
                 <hr/>
                 <h2>Potential Awards</h2>
-                <div style={{display: 'flex'}}>
+                <div style={{display: 'flex', flexWrap: 'wrap'}}>
                     <div>
                         <p>Walk 100 km total:</p>
                         <p>Win a free waterbottle</p>

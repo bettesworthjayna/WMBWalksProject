@@ -17,7 +17,7 @@ const ResponsiveAppBar = () => {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             
               <Button sx={{ color: '#fff' }} href='/manageTokens'>
-                Your Account
+                Trade Tokens             
               </Button>
           </Box>
           <Button color="inherit" href='/tutorials'>Tutorials</Button>
