@@ -88,6 +88,7 @@ class Personal extends Component {
             <div>
                 <h1>WMB Token Information</h1>
                 <h2>Your Total Supply: {this.state.myBalance}</h2>
+                
                 <h2>Your Tokens:</h2>
                 <RewardNFT/>
                 <hr/>

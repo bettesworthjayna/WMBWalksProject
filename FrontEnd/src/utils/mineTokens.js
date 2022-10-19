@@ -7,7 +7,7 @@ export const mineTokens = async (amount) => {
     const OGBalance = await token.methods.balanceOf(accounts[0]).call();
     const mineAmount = amount - OGBalance;
     if (mineAmount > 0){
-        await token.methods.mint(amount).send({
+        await token.methods.mint(mineAmount).send({
             from: accounts[0],
         });
     }else{
@@ -15,7 +15,7 @@ export const mineTokens = async (amount) => {
     }
     const AfterBalance = await token.methods.balanceOf(accounts[0]).call();
     if(AfterBalance < 10000){
-        return `Congrats, you have ran ${mineAmount} km since you've last checked in`
+        return `Congrats, you have ran ${mineAmount/100} km since you've last checked in`
     }
     if(AfterBalance > 10000 && OGBalance < 10000){
         return "Congrats! You have walked more than 100 total! You now have a free waterbottle NFT and can cash it in at any time"
@@ -26,5 +26,5 @@ export const mineTokens = async (amount) => {
     if (AfterBalance > 100000 && OGBalance < 100000){
         return "Congrats! You have walked more than 1000 total! You now have a free lunch NFT and can cash it in at any time! "
     }
-    return `Congrats, you have walked ${mineAmount} since you last logged in`
+    return `Congrats, you have walked ${mineAmount/100} since you last logged in`
 }

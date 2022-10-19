@@ -35,7 +35,8 @@ class StravaRedirect extends React.Component {
                 // Once complete, go to display page
                 history.push("/yourdistance");
             } catch (error) {
-                history.push("/");
+                history.push("/yourdistance");
+                console.log(error);
             }
         };
         authenticate();
