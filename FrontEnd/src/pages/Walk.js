@@ -20,7 +20,8 @@ class Walk extends Component {
         errorMessage: '', 
         loading: false, 
         firstName: '',
-        contractName: ''
+        contractName: '',
+        account: ''
     }
     async componentDidMount() {
         const name = await token.methods.name().call();
@@ -29,7 +30,7 @@ class Walk extends Component {
         const accounts = await web3.eth.getAccounts();
         const myBalance = await token.methods.balanceOf(accounts[0]).call();
         const contractName = await token.methods.personName(accounts[0]).call();
-        this.setState({name, symbol, totalSupply, myBalance: myBalance/100, contractName});
+        this.setState({name, symbol, totalSupply, myBalance: myBalance/100, contractName, account: accounts[0]});
     }
 
     onSubmit = async (event) => {
@@ -73,7 +74,7 @@ class Walk extends Component {
     render () {
         return (
             <div>
-                <h1>{this.state.contractName|| "Your" } Account:</h1>
+                <h2>{ (this.state.contractName )|| this.state.account }'s Account:</h2>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>

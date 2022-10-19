@@ -39,3 +39,14 @@ export const getUserData = async (userID, accessToken) => {
         console.log(error);
     }
 };
+
+export const getUserActivityArray = async (before, after, page, per_page, accessToken) => {
+    try{
+        const response = await axios.get(
+            `https://www.strava.com/api/v3/athlete/activities?before=${before}&after=${after}&page=${page}&per_page=${per_page}`,
+            { headers: { Authorization: `Bearer ${accessToken}` } }
+        )
+    }catch(err){
+        console.log(err);
+    }
+}
