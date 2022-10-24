@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
-
+//navigation bar containing links to important pages
 const ResponsiveAppBar = () => {
   return (
     <AppBar position="static" style={{ background: '#303f9f' }}>

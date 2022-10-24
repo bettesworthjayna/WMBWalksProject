@@ -7,7 +7,8 @@ import {errorHandle} from '../utils/errorMessageHandle';
 import {handleLogin} from '../utils/handleLogin';
 import RewardNFT from '../utils/rewardNFT';
 
-
+//main page where you earn tokens based on your km walk. It has option to connect to strava, to change your name
+//and you can see the amount of tokens you have when you log on. 
 class Walk extends Component {
     state = {
         name: '', 
@@ -81,7 +82,7 @@ class Walk extends Component {
                 <h3>Your Total Supply: {this.state.myBalance}</h3>
                 <br/>
                 
-                <h4>Connect to strava to mine new tokens</h4>
+                <h3>Connect to strava to mine new tokens</h3>
                 <button onClick={handleLogin} >Connect</button>
                 <br/>
 

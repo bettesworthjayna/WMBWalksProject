@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AddNetwork from '../images/Add Polygon/1-AddNetwork.PNG';
 import Information from '../images/Add Polygon/2-Information.PNG'
 
+//tutorial section on how to use and set up components like metamask or polygon ect...
 class Tutorials extends Component{
 
     render(){

@@ -1,7 +1,8 @@
 import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 
-
+//When mining tokens, this functions determines the amount of new tokens needed to be mined 
+//based of the amount of km that they have ran
 export const mineTokens = async (amount) => {
     const accounts = await web3.eth.getAccounts();
     const OGBalance = await token.methods.balanceOf(accounts[0]).call();

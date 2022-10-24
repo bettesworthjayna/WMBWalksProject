@@ -7,7 +7,7 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 
 
-
+//reterns images for the reward tokens that the user has. 
 const  RewardNFT =  () => {
    
     const [has100, setHas100] = useState('');

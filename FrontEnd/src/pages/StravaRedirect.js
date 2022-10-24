@@ -7,8 +7,11 @@ import {
     cleanUpAuthToken,
     testAuthGetter,
     getUserData,
+    getUserActivityArray,
+    getTotalActivityDistance,
 } from "../utils/stravaFunctions";
 
+//redirect. This gets all the information from the strava API and puts them into props to be used later. 
 class StravaRedirect extends React.Component {
     componentDidMount() {
         const authenticate = async () => {
@@ -29,10 +32,18 @@ class StravaRedirect extends React.Component {
                 const userID = tokens.athlete.id;
 
                 // Axios request to get users info
-                const user = await getUserData(userID, accessToken);
-                this.props.setUserActivities(user); //redux setting actions
+               // const user = await getUserData(userID, accessToken);
+               // this.props.setUserActivities(user); //redux setting actions
 
+               //axios request to get users activity array
+                const activities = await getUserActivityArray( 1663516992, 1, 200, accessToken); //that EPOTCH number will eventually need to be changed to when the user first signs up for the contract. 
+        
+                //get total distance in the array of all events:\
+                const distance = await getTotalActivityDistance(activities);
+                //console.log(distance)
+                this.props.setUserActivities(distance);
                 // Once complete, go to display page
+               
                 history.push("/yourdistance");
             } catch (error) {
                 history.push("/yourdistance");

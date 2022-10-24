@@ -5,6 +5,8 @@ import Walk500 from '../images/wmb500.PNG';
 import Walk1000 from '../images/wmb1000.PNG';
 import Walk10000 from '../images/wmb10000.PNG';
 
+//homepage of the application. This displays the information about the token and rewards you can win
+//from this page you also have to connect to metamask to sii important information
 class WMBIndex extends Component {
     state = {
         name: '', 

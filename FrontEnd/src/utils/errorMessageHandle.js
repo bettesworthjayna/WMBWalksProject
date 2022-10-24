@@ -1,3 +1,4 @@
+//converts error messages into readable strings depending on the message
 export const errorHandle = (msg) => {
     if (msg === "MetaMask Tx Signature: User denied transaction signature."){
         return "User Denied Transaction on Wallet"

@@ -6,6 +6,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import RewardNFT from '../utils/rewardNFT';
 import {errorHandle} from '../utils/errorMessageHandle'
 
+//gives you options to transfer your tokens to other wallet addresses. 
 class Personal extends Component {
     state = {
         message: '', 
@@ -88,9 +89,7 @@ class Personal extends Component {
             <div>
                 <h1>WMB Token Information</h1>
                 <h2>Your Total Supply: {this.state.myBalance}</h2>
-                
-                <h2>Your Tokens:</h2>
-                <RewardNFT/>
+
                 <hr/>
                 <h2>Manage your WMB tokens: </h2>
                 <br/>

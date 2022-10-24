@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//simple about page that tells users about the account
 class About extends Component{
 
     render(){
