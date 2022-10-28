@@ -8,15 +8,24 @@ class Tutorials extends Component{
     render(){
         return(
             
-            <div>
+            <div style={{textAlign: 'center'}}>
                 <h1>Tutorials</h1>
                 <h2>Get Metamask Wallet extension</h2>
-                    <p>Download one of the following extensions depending on your browser </p>
-                    <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">Chrome Extension </a>
-                    <a href="https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm"> Microsoft Edge Extension</a>
+                <p>Download one of the following extensions depending on your browser </p>
+                <ul style={{listStyleType: 'none'}}>
+                    <li>
+                        <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">Chrome Extension </a>
+                    </li>
+                    <li>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm"> Microsoft Edge Extension</a>
+                    </li>
+                    <li>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/metamask/ejhttps://addons.mozilla.org/en-CA/firefox/addon/ether-metamask/balbakoplchlghecdalmeeeajnimhm"> Firefox Extension</a>
+                    </li>
+                    <li>The metamask web extension is supported on Chrome, Firefox, Brave, Edge, and Opera. You can find the extension download for each of these at their sites.</li>
                     <p>Set up - Follow this tutorial:</p>
                     <a href="https://www.one37pm.com/nft/how-to-set-up-metamask-wallet" >Set up Metamask</a>
-                
+                </ul>
 
                 <h2>Connect to pollygon network</h2>
                     <p>First open metamask</p>

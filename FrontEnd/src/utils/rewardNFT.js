@@ -14,8 +14,10 @@ const  RewardNFT =  () => {
     const [has500, setHas500] = useState('');
     const [has1000, setHas1000] = useState('');
     //const [has10000, setHas10000] = useState('');
-
+    let accountActive = true;
     async function populateRewardTokens(){
+        try{
+        
         const accounts = await web3.eth.getAccounts();
         const reward100 = await token.methods.has100km(accounts[0]).call();
         const reward500 = await token.methods.has500km(accounts[0]).call();
@@ -25,14 +27,24 @@ const  RewardNFT =  () => {
         setHas500(reward500);
         setHas1000(reward1000);
         // setHas10000(reward10000);
-
+        }catch (err){
+            console.log(err);
+            accountActive = false;
+        }
     }
 
     useEffect(() => {
         populateRewardTokens();
     }, [])
 
-    if(has100){
+    if(!accountActive){
+        return (
+            <div>
+                <h2>Make sure your metamask is connected. Add the extension or find the pop up</h2>
+            </div>
+        )
+    }
+     else if(has100){
         if(has500){
             if(has1000){
                 return (<div>

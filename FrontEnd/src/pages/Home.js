@@ -4,6 +4,7 @@ import Walk100 from '../images/wmb100.PNG';
 import Walk500 from '../images/wmb500.PNG';
 import Walk1000 from '../images/wmb1000.PNG';
 import Walk10000 from '../images/wmb10000.PNG';
+import  Button from '@mui/material/Button';
 
 //homepage of the application. This displays the information about the token and rewards you can win
 //from this page you also have to connect to metamask to sii important information
@@ -21,19 +22,19 @@ class WMBIndex extends Component {
     }
     render () {
         return ( 
-            <div>
+            <div style={{textAlign: 'center'}}>
                 <h1>WMB Walks</h1>
                 <hr/>
                <p>Connect your MetaMask account to access your tokens and progress on this application</p>
                <p>Sign up and record walks or runs to earn tokens</p>
                <p> Need Help with these tasks? </p>
-               <a href="/tutorials">Head to tutorials: </a>
+               <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
                 <hr/>
                 <h2>Potential Awards</h2>
-                <div style={{display: 'flex', flexWrap: 'wrap'}}>
+                <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
                         <hr/>
                         <p>Walk 100 km total:</p>

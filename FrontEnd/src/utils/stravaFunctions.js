@@ -45,7 +45,10 @@ export const getUserData = async (userID, accessToken) => {
 };
 
 //this gets the total distance the user has traveled after giving an array of activities
-export const getTotalActivityDistance = async (activities) => {
+export const getTotalActivityDistance = async (activities, startDate) => {
+    if(startDate === 0){
+        return 0;
+    }
     let i = 0;
     let distance = 0;
     while(i < activities.length){

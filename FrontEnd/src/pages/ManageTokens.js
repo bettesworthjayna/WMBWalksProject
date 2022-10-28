@@ -3,7 +3,7 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
-import RewardNFT from '../utils/rewardNFT';
+//import RewardNFT from '../utils/rewardNFT';
 import {errorHandle} from '../utils/errorMessageHandle'
 
 //gives you options to transfer your tokens to other wallet addresses. 
@@ -21,9 +21,13 @@ class Personal extends Component {
         accountFrom: ''
     }
     async componentDidMount() {
+        try{
         const accounts = await web3.eth.getAccounts();
         const myBalance = await token.methods.balanceOf(accounts[0]).call();
         this.setState({ myBalance: myBalance/100});
+        }catch (err){
+            console.log(err);
+        }
     }
 
     onTransferSubmit = async (event) => {
@@ -86,11 +90,12 @@ class Personal extends Component {
     render () {
         return ( 
             
-            <div>
+            <div style={{textAlign: 'center'}}>
                 <h1>WMB Token Information</h1>
                 <h2>Your Total Supply: {this.state.myBalance}</h2>
 
                 <hr/>
+                <div style={{textAlign: 'left'}}>
                 <h2>Manage your WMB tokens: </h2>
                 <br/>
                 { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
@@ -155,6 +160,7 @@ class Personal extends Component {
                         Submit
                     </LoadingButton>
                 </form>
+                </div>
            </div> 
         )
     }

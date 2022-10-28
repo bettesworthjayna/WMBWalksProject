@@ -5,6 +5,10 @@ import { mineTokens } from "../utils/mineTokens";
 import { Alert } from "@mui/material";
 import { errorHandle } from "../utils/errorMessageHandle";
 import LoadingButton from "@mui/lab/LoadingButton";
+import Button from "@mui/material/Button";
+import { getTotalActivityDistance } from "../utils/stravaFunctions";
+import web3 from "../EtherConnect/web3";
+import token from "../EtherConnect/token"
 
 //connects the strava API info to your account and mines the correct amount of tokens accordingly. 
 const YourDistance =  (props) => {
@@ -17,11 +21,21 @@ const YourDistance =  (props) => {
             
             async function fetchData (){
                 try{
-                    const distance = props.user
+                    const accounts = await web3.eth.getAccounts();
+                    const startDate = await token.methods.startDate(accounts[0]).call();
+                    const distance = await getTotalActivityDistance(props.user)
+                    if(startDate !== 0){
                     setRunWalkDistance ( Math.floor(distance / 10)/100);
-                    
+                    }else{
+                        setRunWalkDistance(0);
+                    }
                     setLoading(true);
+                    if (startDate !== 0){
                     setReturnMessage (await mineTokens(Math.floor(distance / 10)));
+                    }else{
+                        await mineTokens(Math.floor(distance / 10))
+                        setReturnMessage("Your now connected to the WMB App! Record your run walk or hike on strava to earn tokens");
+                    }
                     setLoading(false);
                 }catch(err){
                     console.log(err);
@@ -36,7 +50,7 @@ const YourDistance =  (props) => {
 
     return (
         
-        <div>
+        <div style={{textAlign: 'center'}}>
             <h1>Hi, {props.returnTokens.athlete.firstname}!</h1>
             <h2>Run / Walk total distance: {runWalkDistance}</h2>
             <h3>{returnMessage}</h3>
@@ -46,7 +60,8 @@ const YourDistance =  (props) => {
             <br/>
             <p> </p>
             { errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
-            <a href="/walk">Go back to Walk Page!</a>
+            
+            <Button color="inherit" href='/walk'> &lt; &lt; Back to Account Page</Button>
         </div>
        
     );
@@ -54,7 +69,8 @@ const YourDistance =  (props) => {
         console.log(err);
 
         return (
-            <div>
+            <div style={{textAlign: 'center'}}>
+                 { errorMessage && <Alert severity='error'> { "please connect your metamask account before connecting to strava" } </Alert> }
                 <br />
                 <button onClick={handleLogin}>Connect with Strava</button>
             </div>

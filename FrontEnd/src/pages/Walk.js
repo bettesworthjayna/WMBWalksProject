@@ -3,6 +3,7 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
+import  Button  from '@mui/material/Button';
 import {errorHandle} from '../utils/errorMessageHandle';
 import {handleLogin} from '../utils/handleLogin';
 import RewardNFT from '../utils/rewardNFT';
@@ -25,6 +26,7 @@ class Walk extends Component {
         account: ''
     }
     async componentDidMount() {
+        try{
         const name = await token.methods.name().call();
         const symbol = await token.methods.symbol().call();
         const totalSupply = await token.methods.totalSupply().call();
@@ -32,6 +34,10 @@ class Walk extends Component {
         const myBalance = await token.methods.balanceOf(accounts[0]).call();
         const contractName = await token.methods.personName(accounts[0]).call();
         this.setState({name, symbol, totalSupply, myBalance: myBalance/100, contractName, account: accounts[0]});
+        } catch (err){
+            console.log(err);
+
+        }
     }
 
     onSubmit = async (event) => {
@@ -74,21 +80,22 @@ class Walk extends Component {
 
     render () {
         return (
-            <div>
+            <div style={{textAlign: 'center'}}>
                 <h2>{ (this.state.contractName )|| this.state.account }'s Account:</h2>
                 <h3>Token Name: {this.state.name}, </h3>
-                <h3>Token Symbol: {this.state.symbol} </h3>
-                <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
+                <h3>Token Symbol: {this.state.symbol}, </h3>
                 <h3>Your Total Supply: {this.state.myBalance}</h3>
                 <br/>
-                
-                <h3>Connect to strava to mine new tokens</h3>
-                <button onClick={handleLogin} >Connect</button>
-                <br/>
+                <div style={{backgroundColor: '#b3e5fc', paddingBottom: '10px', maxWidth: '350px', margin: '0 auto', boxShadow: '5px 5px #e1f5fe'}}>
+                    <h3>Connect to strava to mine new tokens</h3>
+                    <p>(Update your Balance)</p>
+                    <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect</Button>
+                    <br/>
+                </div>
 
                 <form onSubmit={this.onNameSubmit}>
                     <div>
-                    <h4>Change Name:</h4>
+                    <h3>Change Name:</h3>
                     <input 
                         label="km"
                         value= {this.state.firstName}

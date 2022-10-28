@@ -10,6 +10,8 @@ export const errorHandle = (msg) => {
         return "Missing information. Make sure to fill out all fields including Amount of WMB and Address field depending on which transaction option chosen"
     }else if (msg.substring(0,35) === 'invalid address (argument="address"'){
         return "Invalid address. Please put in a valid one"
+    }else if (msg === 'No "from" address specified in neither the given options, nor the default options.'){
+        return "Connect your metamask account. Make sure the extension is installed and you sign in using the pop up"
     }
     return msg
 }
