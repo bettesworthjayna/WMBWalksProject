@@ -1,5 +1,5 @@
 const { REACT_APP_CLIENT_ID } = process.env;
-const redirectUrl = "http://localhost:3000/redirect"
+const redirectUrl = "https://splendid-ganache-ee2feb.netlify.app/redirect"
 
 //goes to the strava site and requests authorization of the app to use strava information
 export const handleLogin = () => {

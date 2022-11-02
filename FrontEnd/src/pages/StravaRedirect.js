@@ -63,7 +63,11 @@ class StravaRedirect extends React.Component {
     }
 
     render() {
-        return <div>Loading</div>;
+        return <div style={{textAlign: 'center'}}>
+            <br/>
+            <h3>Loading ... </h3>
+            
+            </div>;
     }
 }
 

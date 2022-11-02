@@ -68,14 +68,14 @@ class WMBIndex extends Component {
                     <div>
                         <hr/>
                         <p>Walk 1000 km total:</p>
-                        <p>Win a free lunch</p>
+                        <p>Win a free lunch!</p>
                         <img  src={Walk1000} height='150' alt="walk 1000" />
                        
                     </div>
                     <div>
                         <hr/>
                         <p>Walk 10,000 km total:</p>
-                        <p>Win a vacation day</p>
+                        <p>Win a vacation day!</p>
                         <img  src={Walk10000} height='150' alt="walk 10000" />
                         
                     </div>

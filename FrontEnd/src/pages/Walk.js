@@ -81,7 +81,7 @@ class Walk extends Component {
     render () {
         return (
             <div style={{textAlign: 'center'}}>
-                <h2>{ (this.state.contractName )|| this.state.account }'s Account:</h2>
+                <h2>{ (this.state.contractName )|| ((this.state.account).substring(0, 12) + '...') }'s Account:</h2>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol}, </h3>
                 <h3>Your Total Supply: {this.state.myBalance}</h3>

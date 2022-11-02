@@ -56,32 +56,32 @@ const  RewardNFT =  () => {
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
                         <hr/>
-                        <img  src={Walk5} height='200' alt="walk 5" />
+                        <img  src={Walk5} height='150' alt="walk 5" />
                         
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk10} height='200' alt="walk 10" />
+                        <img  src={Walk10} height='150' alt="walk 10" />
                         
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk100} height='200' alt="walk 100" />
+                        <img  src={Walk100} height='150' alt="walk 100" />
                         
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk500} height='220' alt="walk 500" />
+                        <img  src={Walk500} height='150' alt="walk 500" />
                         
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk1000} height='200' alt="walk 1000" />
+                        <img  src={Walk1000} height='150' alt="walk 1000" />
                        
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk10000} height='210' alt="walk 10000" />
+                        <img  src={Walk10000} height='150' alt="walk 10000" />
                         
                     </div>
             </div>
@@ -91,27 +91,27 @@ const  RewardNFT =  () => {
                 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                         <div>
                             <hr/>
-                            <img  src={Walk5} height='200' alt="walk 5" />
+                            <img  src={Walk5} height='150' alt="walk 5" />
                             
                         </div>
                         <div>
                             <hr/>
-                            <img  src={Walk10} height='200' alt="walk 10" />
+                            <img  src={Walk10} height='150' alt="walk 10" />
                             
                         </div>
                         <div>
                             <hr/>
-                            <img  src={Walk100} height='200' alt="walk 100" />
+                            <img  src={Walk100} height='150' alt="walk 100" />
                             
                         </div>
                         <div>
                             <hr/>
-                            <img  src={Walk500} height='220' alt="walk 500" />
+                            <img  src={Walk500} height='150' alt="walk 500" />
                             
                         </div>
                         <div>
                             <hr/>
-                            <img  src={Walk1000} height='200' alt="walk 1000" />
+                            <img  src={Walk1000} height='150' alt="walk 1000" />
                            
                         </div>
                 </div>
@@ -122,22 +122,22 @@ const  RewardNFT =  () => {
                     <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                             <div>
                                 <hr/>
-                                <img  src={Walk5} height='200' alt="walk 5" />
+                                <img  src={Walk5} height='150' alt="walk 5" />
                                 
                             </div>
                             <div>
                                 <hr/>
-                                <img  src={Walk10} height='200' alt="walk 10" />
+                                <img  src={Walk10} height='150' alt="walk 10" />
                                 
                             </div>
                             <div>
                                 <hr/>
-                                <img  src={Walk100} height='200' alt="walk 100" />
+                                <img  src={Walk100} height='150' alt="walk 100" />
                                 
                             </div>
                             <div>
                                 <hr/>
-                                <img  src={Walk500} height='220' alt="walk 500" />
+                                <img  src={Walk500} height='150' alt="walk 500" />
                                 
                             </div>
                             
@@ -148,17 +148,17 @@ const  RewardNFT =  () => {
                         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                                 <div>
                                     <hr/>
-                                    <img  src={Walk5} height='200' alt="walk 5" />
+                                    <img  src={Walk5} height='150' alt="walk 5" />
                                     
                                 </div>
                                 <div>
                                     <hr/>
-                                    <img  src={Walk10} height='200' alt="walk 10" />
+                                    <img  src={Walk10} height='150' alt="walk 10" />
                                     
                                 </div>
                                 <div>
                                     <hr/>
-                                    <img  src={Walk100} height='200' alt="walk 100" />
+                                    <img  src={Walk100} height='150' alt="walk 100" />
                                     
                                 </div>
                                 
@@ -169,12 +169,12 @@ const  RewardNFT =  () => {
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
                         <hr/>
-                        <img  src={Walk5} height='200' alt="walk 5" />
+                        <img  src={Walk5} height='150' alt="walk 5" />
                         
                     </div>
                     <div>
                         <hr/>
-                        <img  src={Walk10} height='200' alt="walk 10" />
+                        <img  src={Walk10} height='150' alt="walk 10" />
                         
                     </div>
                     
@@ -185,7 +185,7 @@ const  RewardNFT =  () => {
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
                         <hr/>
-                        <img  src={Walk5} height='200' alt="walk 5" />
+                        <img  src={Walk5} height='150' alt="walk 5" />
                         
                     </div> 
             </div>

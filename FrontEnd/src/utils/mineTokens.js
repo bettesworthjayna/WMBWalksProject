@@ -7,6 +7,13 @@ export const mineTokens = async (amount) => {
     const accounts = await web3.eth.getAccounts();
     const OGBalance = await token.methods.balanceOf(accounts[0]).call();
     const mineAmount = amount - OGBalance;
+    const startDate = await token.methods.startDate(accounts[0]).call();
+    if(startDate == 0){
+        await token.methods.mint(0).send({
+            from: accounts[0],
+        });
+        return "Thanks for signing up for WMB walks! Record your next Walk / Run / Hike on Strava to earn tokens";
+    }
     if (mineAmount > 0){
         await token.methods.mint(mineAmount).send({
             from: accounts[0],

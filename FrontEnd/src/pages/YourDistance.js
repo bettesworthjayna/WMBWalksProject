@@ -10,6 +10,7 @@ import { getTotalActivityDistance } from "../utils/stravaFunctions";
 import web3 from "../EtherConnect/web3";
 import token from "../EtherConnect/token"
 
+
 //connects the strava API info to your account and mines the correct amount of tokens accordingly. 
 const YourDistance =  (props) => {
      const [returnMessage, setReturnMessage] = useState('');
@@ -24,7 +25,7 @@ const YourDistance =  (props) => {
                     const accounts = await web3.eth.getAccounts();
                     const startDate = await token.methods.startDate(accounts[0]).call();
                     const distance = await getTotalActivityDistance(props.user)
-                    if(startDate !== 0){
+                    if(startDate != 0){
                     setRunWalkDistance ( Math.floor(distance / 10)/100);
                     }else{
                         setRunWalkDistance(0);
@@ -72,7 +73,8 @@ const YourDistance =  (props) => {
             <div style={{textAlign: 'center'}}>
                  { errorMessage && <Alert severity='error'> { "please connect your metamask account before connecting to strava" } </Alert> }
                 <br />
-                <button onClick={handleLogin}>Connect with Strava</button>
+                <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect with Strava</Button>
+                
             </div>
         )
     }

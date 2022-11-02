@@ -97,6 +97,7 @@ class Personal extends Component {
                 <hr/>
                 <div style={{textAlign: 'left'}}>
                 <h2>Manage your WMB tokens: </h2>
+                <p>You can only transfer a maximum of 1 token per transaction</p>
                 <br/>
                 { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
                 <br />
