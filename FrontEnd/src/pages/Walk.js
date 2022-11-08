@@ -81,6 +81,7 @@ class Walk extends Component {
     render () {
         return (
             <div style={{textAlign: 'center'}}>
+                 { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
                 <h2>{ (this.state.contractName )|| ((this.state.account).substring(0, 12) + '...') }'s Account:</h2>
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol}, </h3>
@@ -92,6 +93,9 @@ class Walk extends Component {
                     <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect</Button>
                     <br/>
                 </div>
+
+                <h2>Your Tokens:</h2>
+                <RewardNFT/>
 
                 <form onSubmit={this.onNameSubmit}>
                     <div>
@@ -107,9 +111,8 @@ class Walk extends Component {
                         Submit
                     </LoadingButton>
                 </form>
-                { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
-                <h2>Your Tokens:</h2>
-                <RewardNFT/>
+               
+                
             </div>
         )
     }

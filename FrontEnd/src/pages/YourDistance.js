@@ -6,17 +6,26 @@ import { Alert } from "@mui/material";
 import { errorHandle } from "../utils/errorMessageHandle";
 import LoadingButton from "@mui/lab/LoadingButton";
 import Button from "@mui/material/Button";
-import { getTotalActivityDistance } from "../utils/stravaFunctions";
+import { getTotalActivityDistance} from "../utils/stravaFunctions";
 import web3 from "../EtherConnect/web3";
-import token from "../EtherConnect/token"
+import token from "../EtherConnect/token";
+import { giveNFT } from "../utils/giveNFTs";
 
 
 //connects the strava API info to your account and mines the correct amount of tokens accordingly. 
-const YourDistance =  (props) => {
+const YourDistance = (props) => {
      const [returnMessage, setReturnMessage] = useState('');
      const [runWalkDistance, setRunWalkDistance] = useState(0);
      const [errorMessage, setErrorMessage] = useState('');
      const [loading, setLoading] = useState(false);
+
+     const [latestRun, setLatestRun] = useState(0);
+     const [twolatestRun, setTwoLatestRun] = useState(0);
+     const [threelatestRun, setThreeLatestRun] = useState(0);
+     const [latestTitle, setLatestTitle] = useState('');
+     const [twoTitle, setTwoTitle] = useState('');
+     const [threetTitle, setThreeTitle] = useState('');
+
 
         useEffect( () => {
             
@@ -24,7 +33,7 @@ const YourDistance =  (props) => {
                 try{
                     const accounts = await web3.eth.getAccounts();
                     const startDate = await token.methods.startDate(accounts[0]).call();
-                    const distance = await getTotalActivityDistance(props.user)
+                    const distance = await getTotalActivityDistance(props.user);
                     if(startDate != 0){
                     setRunWalkDistance ( Math.floor(distance / 10)/100);
                     }else{
@@ -38,13 +47,37 @@ const YourDistance =  (props) => {
                         setReturnMessage("Your now connected to the WMB App! Record your run walk or hike on strava to earn tokens");
                     }
                     setLoading(false);
+
+
+                    
                 }catch(err){
                     console.log(err);
                     setErrorMessage(err);
                 }
             }
+
+            async function runs (){
+                try{
+                let i = props.user.length
+                 if(i > 0){
+                     setLatestRun(Math.floor((props.user[i-1]).distance/10)/100);
+                     setLatestTitle(props.user[i-1].name);
+                    if(i > 1){
+                        setTwoLatestRun(Math.floor((props.user[i-2]).distance/10)/100);
+                        setTwoTitle(props.user[i-2].name);
+                        if(i>2){
+                            setThreeLatestRun(Math.floor((props.user[i-3]).distance/10)/100);
+                            setThreeTitle(props.user[i-1].name);
+                        }
+                    }
+                }
+                }catch(err){
+                    console.log(err);
+                }
+            }
             
             fetchData();
+            runs()
         }, []);
     try{     
         
@@ -59,9 +92,16 @@ const YourDistance =  (props) => {
                         
             </LoadingButton>
             <br/>
-            <p> </p>
-            { errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
+            <h4> Latest Activities:</h4>
+
             
+                <p>{latestRun} km ~ {latestTitle}</p>
+                <p>{twolatestRun} km ~ {twoTitle}</p>
+                <p>{threelatestRun} km ~ {threetTitle}</p>
+            
+            
+            { errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
+            <br/>
             <Button color="inherit" href='/walk'> &lt; &lt; Back to Account Page</Button>
         </div>
        
