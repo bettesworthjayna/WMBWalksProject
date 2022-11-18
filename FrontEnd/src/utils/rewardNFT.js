@@ -11,30 +11,32 @@ import web3 from '../EtherConnect/web3';
 
 //reterns images for the reward tokens that the user has. 
 const  RewardNFT =  () => {
-   
-    const [has5, setHas5] = useState('');
-    const [has10, setHas10] = useState('');
-    const [has100, setHas100] = useState('');
-    const [has500, setHas500] = useState('');
-    const [has1000, setHas1000] = useState('');
-    const [has10000, setHas10000] = useState('');
+   const [balance, setBalance] = useState(0);
+    // const [has5, setHas5] = useState('');
+    // const [has10, setHas10] = useState('');
+    // const [has100, setHas100] = useState('');
+    // const [has500, setHas500] = useState('');
+    // const [has1000, setHas1000] = useState('');
+    // const [has10000, setHas10000] = useState('');
     let accountActive = true;
     async function populateRewardTokens(){
         try{
         
         const accounts = await web3.eth.getAccounts();
-        const reward5 = await token.methods.has5km(accounts[0]).call();
-        const reward10 = await token.methods.has10km(accounts[0]).call();
-        const reward100 = await token.methods.has100km(accounts[0]).call();
-        const reward500 = await token.methods.has500km(accounts[0]).call();
-        const reward1000 = await token.methods.has1000km(accounts[0]).call();
-        const reward10000 = await token.methods.has10000km(accounts[0]).call();
-        setHas5(reward5);
-        setHas10(reward10);
-        setHas100(reward100);
-        setHas500(reward500);
-        setHas1000(reward1000);
-        setHas10000(reward10000);
+        const balance = await token.methods.balanceOf(accounts[0]).call();
+        setBalance(balance);
+        // const reward5 = await token.methods.has5km(accounts[0]).call();
+        // const reward10 = await token.methods.has10km(accounts[0]).call();
+        // const reward100 = await token.methods.has100km(accounts[0]).call();
+        // const reward500 = await token.methods.has500km(accounts[0]).call();
+        // const reward1000 = await token.methods.has1000km(accounts[0]).call();
+        // const reward10000 = await token.methods.has10000km(accounts[0]).call();
+        // setHas5(reward5);
+        // setHas10(reward10);
+        // setHas100(reward100);
+        // setHas500(reward500);
+        // setHas1000(reward1000);
+        // setHas10000(reward10000);
         }catch (err){
             console.log(err);
             accountActive = false;
@@ -51,7 +53,7 @@ const  RewardNFT =  () => {
                 <h2>Make sure your metamask is connected. Add the extension or find the pop up</h2>
             </div>
         )
-    }else if(has10000){
+    }else if(balance >= 1000000){
         return(
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
@@ -86,7 +88,7 @@ const  RewardNFT =  () => {
                     </div>
             </div>
         )
-    }else if(has1000){
+    }else if(balance >= 100000){
             return(
                 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                         <div>
@@ -117,7 +119,7 @@ const  RewardNFT =  () => {
                 </div>
             )
 
-        }else if(has500){
+        }else if(balance >= 50000){
                 return(
                     <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                             <div>
@@ -143,7 +145,7 @@ const  RewardNFT =  () => {
                             
                     </div>
                 )
-        }else if(has100){
+        }else if(balance >= 10000){
                     return(
                         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                                 <div>
@@ -164,7 +166,7 @@ const  RewardNFT =  () => {
                                 
                         </div>
                     )
-    }else if(has10){
+    }else if(balance >= 1000){
         return(
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
@@ -180,7 +182,7 @@ const  RewardNFT =  () => {
                     
             </div>
         )
-    }else if(has5){
+    }else if(balance >= 500 ){
         return(
             <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     <div>
@@ -194,7 +196,7 @@ const  RewardNFT =  () => {
 
         return (
             <div>
-                <p>Walk a cummulative 100km to earn your first token</p>
+                <p>Walk a cummulative 5km to earn your first NFT</p>
             </div>
         )
     }

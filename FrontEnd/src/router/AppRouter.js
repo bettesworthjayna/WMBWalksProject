@@ -5,9 +5,9 @@ import Home from "../pages/Home";
 import StravaRedirect from "../pages/StravaRedirect";
 import YourDistance from "../pages/YourDistance";
 import About from '../pages/About'
-import Personal from '../pages/ManageTokens';
 import Tutorials from "../pages/Tutorials";
 import Layout from "../utils/Layout";
+
 
 //provides all the url paths. If wanting to add a new page to your website, do this here. 
 class AppRouter extends React.Component {
@@ -22,7 +22,6 @@ class AppRouter extends React.Component {
                         <Route path="/yourdistance" component={YourDistance} />
                         <Route path="/about" component={About} />
                         <Route path='/walk' component={Walk} />
-                        <Route path='/manageTokens' component={Personal} />
                         <Route path='/tutorials' component={Tutorials} />
                     </Switch>
                     </Layout>

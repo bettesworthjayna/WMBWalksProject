@@ -38,18 +38,18 @@ contract wmbToken is IERC20 {
 
     mapping(address => string) public personName;
     
-    struct scores{
-        address accountAddress;
-        string accountName;
-        uint distance;
-    }
-
-      scores[5] public leaders;
+    //reward system
+    mapping(address => bool) public has5km;
+    mapping(address => bool) public has10km;
+    mapping(address => bool) public has100km;
+    mapping(address => bool) public has500km; 
+    mapping(address => bool) public has1000km; 
+    mapping(address => bool) public has10000km; 
     //have state variables for totalSupply, balanceOf, and allowances so dont need function calls. 
     //these functions are simple enough and the solidity compiler recognises then as commands
 
     function transfer (address recipient, uint amount) external returns (bool){
-        require(amount <= 10, "Maximum transfer of 0.1 WMB Tokens");
+        require(amount <= 100);
         balanceOf[msg.sender] -= amount;
         balanceOf[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
@@ -57,7 +57,6 @@ contract wmbToken is IERC20 {
     }
 
     function approve(address spender, uint amount) external returns (bool){
-        require(amount <= 100,  "Maximum approval of 1 WMB Tokens");
         allowance[msg.sender][spender] = amount;
         emit Approval(msg.sender, spender, amount);
         return true;
@@ -68,7 +67,7 @@ contract wmbToken is IERC20 {
     }
 
     function transferFrom(address sender, address recipient, uint amount) external returns (bool){
-        require(amount <= 10,  "Maximum transfer of 0.1 WMB Tokens");
+        require(amount <= 100);
         allowance[sender][msg.sender] -= amount;
         balanceOf[sender] -= amount;
         balanceOf[recipient] += amount;
@@ -85,27 +84,37 @@ contract wmbToken is IERC20 {
         balanceOf[msg.sender] += amount;
         totalSupply += amount;
         emit Transfer(address(0), msg.sender, amount);
-        updateLeaderBoard(balanceOf[msg.sender], msg.sender);
-    }
-
-    function updateLeaderBoard(uint newDistance, address accountAdd) internal {
-        scores memory cur = scores({accountAddress : accountAdd, accountName: personName[accountAdd], distance: newDistance});
-        uint8 i = 0;
-        while(i < 5){
-            if(leaders[i].accountAddress == accountAdd){
-                leaders[i] = cur;
-                return;
+        if(balanceOf[msg.sender] >= 500){
+            if(has5km[msg.sender] == false){
+                has5km[msg.sender] = true;
             }
-            if(leaders[i].distance < cur.distance){
-                scores memory temp = leaders[i];
-                leaders[i] = cur;
-                cur = temp;
+             if(balanceOf[msg.sender] >= 1000){
+                if(has10km[msg.sender] == false){
+                   has10km[msg.sender] = true; 
+                }
+                if (balanceOf[msg.sender] >= 10000){
+                    if (has100km[msg.sender] == false){
+                        has100km[msg.sender] = true;
+                    } 
+                    if (balanceOf[msg.sender] >= 50000){
+                        if(has500km[msg.sender] == false){
+                            has500km[msg.sender] = true;
+                        }
+                         if (balanceOf[msg.sender] >= 100000){
+                            if(has1000km[msg.sender] == false){
+                                has1000km[msg.sender] = true;
+                            }
+                             if (balanceOf[msg.sender] >= 1000000){
+                                if(has10000km[msg.sender] == false){
+                                    has10000km[msg.sender] = true;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            i++;
         }
     }
-
-
 
     //delete tokens from existance
     function burn(uint amount) external {

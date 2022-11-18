@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 import { getTotalActivityDistance} from "../utils/stravaFunctions";
 import web3 from "../EtherConnect/web3";
 import token from "../EtherConnect/token";
-import { giveNFT } from "../utils/giveNFTs";
+
 
 
 //connects the strava API info to your account and mines the correct amount of tokens accordingly. 
@@ -67,7 +67,7 @@ const YourDistance = (props) => {
                         setTwoTitle(props.user[i-2].name);
                         if(i>2){
                             setThreeLatestRun(Math.floor((props.user[i-3]).distance/10)/100);
-                            setThreeTitle(props.user[i-1].name);
+                            setThreeTitle(props.user[i-3].name);
                         }
                     }
                 }

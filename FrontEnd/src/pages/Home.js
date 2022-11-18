@@ -7,6 +7,7 @@ import Walk500 from '../images/500kmWMB.PNG';
 import Walk1000 from '../images/1000kmWMB.PNG';
 import Walk10000 from '../images/10000kmWMB.PNG';
 import  Button from '@mui/material/Button';
+import Leaderboard  from '../utils/leaderboard';
 
 //homepage of the application. This displays the information about the token and rewards you can win
 //from this page you also have to connect to metamask to sii important information
@@ -25,7 +26,7 @@ class WMBIndex extends Component {
     render () {
         return ( 
             <div style={{textAlign: 'center'}}>
-                <h1>WMB Walks</h1>
+                <h1>WMB Fit</h1>
                 <hr/>
                <p>Connect your MetaMask account to access your tokens and progress on this application</p>
                <p>Sign up and record walks or runs to earn tokens</p>
@@ -34,6 +35,7 @@ class WMBIndex extends Component {
                 <h3>Token Name: {this.state.name}, </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
+                 
                 <hr/>
                 <h2>Potential Awards</h2>
                 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -54,7 +56,7 @@ class WMBIndex extends Component {
                     <div>
                         <hr/>
                         <p>Walk 100 km total:</p>
-                        <p>Win some comfy socks!</p>
+                        <p>        Win some comfy socks!</p>
                         <img  src={Walk100} height='150' alt="walk 100" />
                         
                     </div>
@@ -72,6 +74,7 @@ class WMBIndex extends Component {
                         <img  src={Walk1000} height='150' alt="walk 1000" />
                        
                     </div>
+
                     <div>
                         <hr/>
                         <p>Walk 10,000 km total:</p>
@@ -79,7 +82,11 @@ class WMBIndex extends Component {
                         <img  src={Walk10000} height='150' alt="walk 10000" />
                         
                     </div>
-                </div>               
+                </div>
+                <br/>
+                <hr/>
+                <br/>
+                <Leaderboard />            
 
             </div>
 

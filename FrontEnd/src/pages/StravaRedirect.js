@@ -50,7 +50,11 @@ class StravaRedirect extends React.Component {
                 //get total distance in the array of all events:\
                // const distance = await getTotalActivityDistance(activities);
                 //console.log(distance)
-                this.props.setUserActivities(activities);
+                if(startDate == 0){
+                    this.props.setUserActivities([]);
+                }else{
+                    this.props.setUserActivities(activities);
+                }
                 // Once complete, go to display page
                
                 history.push("/yourdistance");

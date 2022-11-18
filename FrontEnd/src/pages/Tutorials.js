@@ -10,31 +10,101 @@ class Tutorials extends Component{
             
             <div style={{textAlign: 'center'}}>
                 <h1>Tutorials</h1>
-                <h2>Get Metamask Wallet extension</h2>
-                <p>Download one of the following extensions depending on your browser </p>
+                <p>Checklist before using the app on Goerli Testnet:</p>
+                <div style={{listStyleType: 'none', textAlign: 'left', maxWidth: '550px', margin: '0 auto'}}>
+                <ol >
+                    <li>&emsp; Install the Metamask extension on your web browser and create a wallet</li>
+                    <li>&emsp; Enable testnets to be shown on metamask</li>
+                    <li>&emsp; Navigate to the Goerli network on your metamask</li>
+                    <li>&emsp; Put Goerli Ether into your account from a goerli faucet. You need to do this &emsp; before making a transaction</li>
+                    <li>&emsp; Connect your metamask account to the application</li>
+                    <li>&emsp; Log into strava</li>
+                    <li>&emsp; Now your all set. You can go on to the application and mine new tokens.</li>
+                </ol>
+                </div>
+                <h2>Install Metamask Extension</h2>
+                <p>Search 'Metamask Extension' on your browser of choice. Metamask only works on Chrome, Firefox, Brave, Edge and Opera so chose one of those. If using Chrome, Edge or Firefox, you can use the following links to install:</p>
                 <ul style={{listStyleType: 'none'}}>
                     <li>
-                        <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank">Chrome Extension </a>
+                        <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en" target="_blank" rel="noreferrer">Chrome Extension </a>
                     </li>
                     <li>
-                        <a href="https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm" target="_blank"> Microsoft Edge Extension</a>
+                        <a href="https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm" target="_blank" rel="noreferrer"> Microsoft Edge Extension</a>
                     </li>
                     <li>
-                        <a href="https://addons.mozilla.org/en-CA/firefox/addon/ether-metamask/" target="_blank"> Firefox Extension</a>
+                        <a href="https://addons.mozilla.org/en-CA/firefox/addon/ether-metamask/" target="_blank" rel="noreferrer"> Firefox Extension</a>
                     </li>
-                    <li>The metamask web extension is supported on Chrome, Firefox, Brave, Edge, and Opera. You can find the extension download for each of these at their sites.</li>
-                    <p>Set up - Follow this tutorial:</p>
-                    <a href="https://www.one37pm.com/nft/how-to-set-up-metamask-wallet" target="_blank" >Set up Metamask</a>
+                   
+                    <a href="https://www.one37pm.com/nft/how-to-set-up-metamask-wallet" target="_blank" rel="noreferrer">Set up Metamask</a>
                 </ul>
-                <h2>Connect to goerli network</h2>
-                <p>In order to see your tokens, you need to be connected to the goerli network.</p>
-                <a href="https://www.one37pm.com/nft/how-to-set-up-metamhttps://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677ask-wallet" target="_blank" >Set up Goerli in your Metamask</a>
+                <h2>Create a New Metamask Wallet </h2>
+                <p>(or import one you already have)</p>
+                <p>The next step, is to open your metamask account. You can do this by clicking the puzzle piece in the right top corner of your computer. 
+                    In there you should see a fox shaped head which is your Metamask Extention. If you click that, you should be taken to your metamask extension.</p>
+                <p>When you first download metamask, you should be prompted to get started. Once you click get started, you should choose to create a new Wallet
+                    unless you already have one that you want to use. (If using a wallet you already created, create a new account in your wallet so you dont accidently
+                    spend any real money)
+                </p>
+                <p> Next you should see a screen that asks you to improve metamask. You can choose either yes or no, your experience will be the same either way</p>
+                <p>After that, you need to create a password to log into your account, and you'll then be lead to a page which gives you a seceret recovery phrase.</p>
+                <p>The secerate recovery phrase is very important. If you lose this, you will lose access to your wallet and wont be able to log back in. make sure
+                    to write it down and store it some place only you know so you can get back into your wallet if need be. Dont loose this phrase or give it to anyone else. 
+                </p>
+                <p>you will then be prompted to re enter your recovery phrase to ensure that you indeed have it written down. Once you hit confirm or done you are all set
+                    and have created a metamask wallet! Congrats!!
+                </p>
+                <h2>Enable Test Networks: </h2>
+                <p>Back on the metamask extension, to use the Goerli Network (where the contract is written) you need to enable test networks. 
+                    First, when in metamask, you should see your icon circle in the top right hand corner. When clicking on it, at the bottom of the dropdown should be a settings icon
+                    click to be brought to settings. 
+                </p>
+                <p>Once in settings, choose the 'advanced' option. Scroll down to where it says 'show test networks' and turn it on. You now should have access to all the test networks</p>
+                <p>Now on your your metamask, click where it says ethereum mainnet. On the dropdown that appears click Goerli Test Network</p>
+                    <p>In order to see your tokens, you need to be connected to the goerli network. A tutorial with pictures can be accessed here: </p>
+                    <a href="https://blog.cryptostars.is/goerli-g%C3%B6rli-testnet-network-to-metamask-and-receiving-test-ethereum-in-less-than-2-min-de13e6fe5677" target="_blank" rel="noreferrer">Set up Goerli in your Metamask</a>
 
-                <h2> Get Free Goerli ETH</h2>
-                <p>In order to mine tokens, you need to get Goerli ETH to pay for the gas fee. </p> 
-                <p>To mine tokens, copy your account address in metamask, and mine tokens </p> 
-                <a href='https://goerli-faucet.pk910.de/' target="_blank" > At this link</a>
-
+                    <h2> Get Free Goerli ETH</h2>
+                    <p>In order to mine tokens, you need to get Goerli ETH to pay for the gas fee. </p> 
+                    <p>To mine tokens, copy your account address in metamask, and mine tokens </p> 
+                    <p> To find your account address, on the main page, there should be the name of your account (this is likely Account 1). 
+                        Below you will find a light grey string of characters. Click on it and it should copy your address. 
+                    </p>
+                    <p>Once you have a copy of your address, go to the following link to mine goerli gas. You will need gas in order to use the application.</p>
+                    <a href='https://goerli-faucet.pk910.de/' target="_blank" rel="noreferrer" > At this link</a>
+                    <p>You will likley need to leave this running in the background of your computer for 1 - 2 hours to get a decent amount of gas. Make sure
+                        you have a minimum of 0.02 Goerli ETH when you mine. 
+                    </p>
+                    <p>After you have enough, make sure you stop mining and claim your reward</p>
+                <h2>Connect metamask</h2>
+                    <p> when first going to the website a pop up should appear from metamask to connect your wallet. If you dont see it, 
+                        refresh your screen to try again. Follow the directions and press confirm and sign it. 
+                    </p>
+                <h2>Authorization Screen</h2>
+                        <p>When connecting to mine tokens on metamask, you will see a metamask pop up appear with information on the transaction that 
+                            is trying to take place. click confirm to proceed with the transaction. 
+                        </p>
+                <h2>Sign up for strava</h2>
+                    <p>If you dont have a strava account already, head to the Strava website:</p>
+                    <a href='https://www.strava.com' target="_blank" rel="noreferrer" >Sign up for Strava</a>
+                <h2> Connecting the App to strava</h2>
+                    <p>To connect to strava, all you need to do is press connect in the account page. this will bring you to 
+                        a page where you need to log in to strava. Once logged in, an authorisation screen should appear where 
+                        you need to press authorize to allow the app to access strava. 
+                    </p>
+               
+                <h2>View your WMB tokens on Metamask</h2>
+                    <p>Do this once contract is deployed on polygon network</p>
+                <h2>View and send NFTs</h2>
+                    <p>Your NFTs earned on these site can be found in your wallet. Since the current tokens are on 
+                        the goerli network, you will need to connect to the contract address and know what the token ID is.
+                        You will also be able to see your tokens on openSea at 
+                        <a href = 'https://testnets.opensea.io/account' target="_blank" rel="noreferrer" >The Opensea testnet site</a>
+                        <p> To see your tokens here you need to connect your wallet to OpenSea.</p>
+                        <a href = 'https://testnets.opensea.io/collection/wmbtoken' target="_blank" rel="noreferrer" >The entire WMB collection in circulation can be viewed here.</a>
+                    </p>
+                
+                <hr/>
+                <p> Below is for connecting to the polygon mainnet. You dont need to do this yet. This is for when the contract is actually deployed</p>
                 <h2>Connect to pollygon network</h2>
                     <p>The contract is going to be mined on the polygon network - in the future - Befor you can use and mine tokens, you have to connect to the polygon network. To do this,  you first need to open your metamask extension</p>
                     <p>Next, at the top of the metamask page, you should see a tab showing the ethereum network. 
@@ -55,12 +125,6 @@ class Tutorials extends Component{
                     <p>Next press save to save the network</p>
                     <br/>
                     <p>Now you should be connected to the polygon network and be able to use it! </p>
-                <h2>View your WMB tokens on Metamask</h2>
-                    <p>Do this once contract is deployed on polygon network</p>
-                <h2>View and send NFTs</h2>
-                <h2>Sign up for strava</h2>
-                    <p>Head to the Strava website:</p>
-                    <a href='https://www.strava.com'>Sign up for Strava</a>
             </div>
             
         )

@@ -94,7 +94,7 @@ class Walk extends Component {
                     <br/>
                 </div>
 
-                <h2>Your Tokens:</h2>
+                <h2>Your NFTs:</h2>
                 <RewardNFT/>
 
                 <form onSubmit={this.onNameSubmit}>

@@ -3,7 +3,6 @@ import token from '../EtherConnect/token';
 import web3 from '../EtherConnect/web3';
 import Alert from '@mui/material/Alert';
 import LoadingButton from '@mui/lab/LoadingButton';
-//import RewardNFT from '../utils/rewardNFT';
 import {errorHandle} from '../utils/errorMessageHandle'
 
 //gives you options to transfer your tokens to other wallet addresses. 
@@ -97,7 +96,7 @@ class Personal extends Component {
                 <hr/>
                 <div style={{textAlign: 'left'}}>
                 <h2>Manage your WMB tokens: </h2>
-                <p>You can only transfer a maximum of 1 token per transaction</p>
+                <p>You can only transfer a maximum of 0.1 token per transaction</p>
                 <br/>
                 { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
                 <br />
