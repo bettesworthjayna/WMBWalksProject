@@ -4,11 +4,11 @@ import { handleLogin } from "../utils/handleLogin";
 import { mineTokens } from "../utils/mineTokens";
 import { Alert } from "@mui/material";
 import { errorHandle } from "../utils/errorMessageHandle";
-import LoadingButton from "@mui/lab/LoadingButton";
 import Button from "@mui/material/Button";
 import { getTotalActivityDistance} from "../utils/stravaFunctions";
 import web3 from "../EtherConnect/web3";
 import token from "../EtherConnect/token";
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 
@@ -88,9 +88,9 @@ const YourDistance = (props) => {
             <h1>Hi, {props.returnTokens.athlete.firstname}!</h1>
             <h2>Run / Walk total distance: {runWalkDistance}</h2>
             <h3>{returnMessage}</h3>
-            <LoadingButton type="submit" loading={loading}  >
-                        
-            </LoadingButton>
+            {loading && <CircularProgress style={{color: '#bdbdbd'}}/>}
+            {loading && <p style={{color: '#bdbdbd'}}>Please Wait for this transaction to confirm on the blockchain…</p>}
+
             <br/>
             <h4> Latest Activities:</h4>
 

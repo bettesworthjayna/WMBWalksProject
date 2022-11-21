@@ -7,6 +7,7 @@ import  Button  from '@mui/material/Button';
 import {errorHandle} from '../utils/errorMessageHandle';
 import {handleLogin} from '../utils/handleLogin';
 import RewardNFT from '../utils/rewardNFT';
+import CircularProgress from '@mui/material/CircularProgress';
 
 //main page where you earn tokens based on your km walk. It has option to connect to strava, to change your name
 //and you can see the amount of tokens you have when you log on. 
@@ -107,7 +108,8 @@ class Walk extends Component {
                     />
                     </div>
                     <br/>
-                    <LoadingButton type="submit" loading={this.state.loading} variant="outlined" >
+                    {this.state.loading && <CircularProgress style={{color: '#bdbdbd'}}/>}
+                    <LoadingButton type="submit" loading={this.state.loading} fullWidth='true' loadingIndicator="Please Wait for this transaction to confirm on the blockchain…" >
                         Submit
                     </LoadingButton>
                 </form>

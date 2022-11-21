@@ -11,6 +11,7 @@ import {
     getUserActivityArray,
    // getTotalActivityDistance,
 } from "../utils/stravaFunctions";
+import CircularProgress from '@mui/material/CircularProgress';
 
 //redirect. This gets all the information from the strava API and puts them into props to be used later. 
 class StravaRedirect extends React.Component {
@@ -70,6 +71,8 @@ class StravaRedirect extends React.Component {
         return <div style={{textAlign: 'center'}}>
             <br/>
             <h3>Loading ... </h3>
+            <CircularProgress style={{color: '#bdbdbd'}}/>
+            <p>If Loading is displayed for a longer than 10 seconds, make sure your metamask is connected to the Goerli Network and then refresh the page</p>
             
             </div>;
     }
