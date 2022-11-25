@@ -88,8 +88,8 @@ class Walk extends Component {
                 <h3>Token Symbol: {this.state.symbol}, </h3>
                 <h3>Your Total Supply: {this.state.myBalance}</h3>
                 <br/>
-                <div style={{backgroundColor: '#b3e5fc', paddingBottom: '10px', maxWidth: '350px', margin: '0 auto', boxShadow: '5px 5px #e1f5fe'}}>
-                    <h3>Connect to strava to mine new tokens</h3>
+                <div style={{backgroundColor: '#b3e5fc', paddingBottom: '10px',  maxWidth: '350px', margin: '0 auto', boxShadow: '5px 5px #e1f5fe'}}>
+                    <h3>Connect to Strava to mine new tokens</h3>
                     <p>(Update your Balance)</p>
                     <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect</Button>
                     <br/>

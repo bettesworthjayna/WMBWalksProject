@@ -11,12 +11,12 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar position="static" style={{ background: '#003b5c' }}>
       <Container maxWidth="xl" >
-        <img  src={logo} height='70' alt="walk 10000" align='right' />
+        <img  src={logo} height='65' alt="walk 10000" align='right' />
         <Toolbar disableGutters >
           <Button color="inherit" href='/'>Home</Button>
-          <Button color="inherit" href='/about'>About</Button>
           <Button color="inherit" href='/walk'>Account</Button>
           <Button color="inherit" href='/tutorials'>Tutorials</Button>
+          <Button color="inherit" href='/about'>About</Button>
         </Toolbar>
       </Container>
     </AppBar>

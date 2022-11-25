@@ -28,9 +28,9 @@ class WMBIndex extends Component {
             <div style={{textAlign: 'center'}}>
                 <h1>WMB Fit</h1>
                 <hr/>
-               <p>Connect your MetaMask account to access your tokens and progress on this application</p>
+               <p>Connect your Metamask account to access your tokens and progress on this application</p>
                <p>Make sure your wallet is connected to your Metamask Account</p>
-               <p>Sign up by connecting to strava in the account section and record walks, runs, or hikes to earn tokens</p>
+               <p>Sign up by connecting to Strava in the account section and record walks, runs, or hikes to earn tokens</p>
                <p> Need help with any of these tasks? </p>
                <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
                 <h3>Token Name: {this.state.name}, </h3>

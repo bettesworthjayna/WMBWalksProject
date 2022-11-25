@@ -196,7 +196,7 @@ const  RewardNFT =  () => {
 
         return (
             <div>
-                <p>Walk a cummulative 5km to earn your first NFT</p>
+                <p>Walk a cumulative 5km to earn your first NFT</p>
             </div>
         )
     }
