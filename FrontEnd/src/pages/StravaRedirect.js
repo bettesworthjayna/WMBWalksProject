@@ -73,6 +73,7 @@ class StravaRedirect extends React.Component {
             <h3>Loading ... </h3>
             <CircularProgress style={{color: '#bdbdbd'}}/>
             <p>If Loading is displayed for a longer than 10 seconds, make sure your metamask is connected to the Goerli Network and then refresh the page</p>
+            <p>If you dont know how to do this, head to the tutorials section</p>
             
             </div>;
     }

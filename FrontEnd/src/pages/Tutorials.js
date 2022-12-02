@@ -8,7 +8,24 @@ import Gor from '../images/tutorials/goToGoerli.png';
 import  Copy from '../images/tutorials/copyAccount.png';
 import Connect from '../images/tutorials/connectToStrava.png';
 import StravaAuth from '../images/tutorials/StravaAuth.png';
-import comTrans from '../images/tutorials/comfirmTransaction.png'
+import comTrans from '../images/tutorials/comfirmTransaction.png';
+import start from '../images/tutorials/Metamask/GetStarted.PNG'
+import create from '../images/tutorials/Metamask/NewWall.PNG';
+import choose from '../images/tutorials/Metamask/Improve.PNG';
+import pass from '../images/tutorials/Metamask/Password.PNG';
+import vid from '../images/tutorials/Metamask/SecureWallVid.PNG';
+import sec1 from '../images/tutorials/Metamask/SecPhrase.PNG';
+import sec2 from '../images/tutorials/Metamask/SecPhrase2.PNG';
+import confirm from '../images/tutorials/Metamask/ConPhrase.PNG'
+import confirm2 from '../images/tutorials/Metamask/ConPhrase2.PNG';
+import done from '../images/tutorials/Metamask/Done.PNG';
+
+
+
+
+
+
+
 
 //tutorial section on how to use and set up components like metamask or polygon ect...
 class Tutorials extends Component{
@@ -27,7 +44,17 @@ class Tutorials extends Component{
                     <li>&emsp; Put Goerli Ether into your account from a Goerli faucet. You need to do this &emsp; before making a transaction</li>
                     <li>&emsp; Connect your Metamask account to the application</li>
                     <li>&emsp; Log into strava</li>
-                    <li>&emsp; Now you're all set. You can go on to the "Account" page of this application and mine new tokens.</li>
+                    <li>&emsp; Now you're all set. You can go on to the "Account" page of this application &emsp; and mine new tokens.</li>
+                </ol>
+                <p>How to use the application</p>
+                <ol >
+                    <li>&emsp; Go to the account page </li>
+                    <li>&emsp; Press ‘connect’ in the box that says “Connect to Strava to Mine New &emsp; Tokens” </li>
+                    <li>&emsp; Press authorize</li>
+                    <li>&emsp; press confirm when a metamask pop up appears</li>
+                    <li>&emsp; Wait for the application to confirm the transaction (this is because the &emsp; &emsp; application is on a blockchain meaning it takes a long time to load transactions)</li>
+                    <li>&emsp; The website will then update depending on how many km you have run or &emsp; walked and reward you with WMB tokens and NFTs accordingly.</li>
+                    <li>&emsp; The next time you go on a walk, repeat this process again!</li>
                 </ol>
                 </div>
                 <p>For more detailed instructions, read below:</p>
@@ -46,26 +73,58 @@ class Tutorials extends Component{
                 <p>You can also search "metamask.io" and you will be directed to download the Metamask extension that is related to your browser you're currentlyt using</p>
                 <h2 style={{textAlign: 'center'}}>Create a New Metamask Wallet </h2>
                 <p style={{textAlign: 'center', margin: '0 auto'}}>(Or import an existing wallet if you already have one)</p>
-                <p>If you need help with pictures: &nbsp;
-                <a href="https://www.one37pm.com/nft/how-to-set-up-metamask-wallet" target="_blank" rel="noreferrer">Set up Metamask</a>
-                </p>
+                
                 <p>Once you have Metamask installed, the next step is to open your Metamask account. You can do this by clicking the puzzle piece in the right top corner of your computer. 
                     In there you should see a fox shaped head which is your Metamask extension. Once the extension is installed the get started page might automatically pop up.
                     If you click that, you should be taken to your Metamask extension.
                     (If this doesnt wor'k then refresh the app, and a Metamask popup should appear if you added the extension correctly)</p>
-                <p>When you first download Metamask, you should be prompted to get started. Once you click 'get started', you should choose to create a new Wallet
+                <p>When you first download Metamask, you should be prompted to get started. </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={start} height="350" alt="Information To Add" />
+                 </div>
+                <p>Once you click "get started", you should choose to create a new Wallet
                     unless you already have one that you want to use. (If using a wallet you already created, create a new account in your wallet so you don't accidently
                     spend any real money)
                 </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={create} height="350" alt="Information To Add" />
+                    </div>
                 <p> Next you should see a screen that asks you to improve Metamask. You can choose either yes or no, your experience will be the same either way</p>
-                <p>After that, you need to create a password to log into your account. Next, you will see a page with a video explaining Metamask. You can either choose to watch it or click next.
-                    Then, you'll be led to a page which gives you a secret recovery phrase. You'll have to click on the shaded box to see the phrase</p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={choose} height="350" alt="Information To Add" />
+                 </div>
+                <p>After that, you need to create a password to log into your account. This can be anything</p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={pass} height="350" alt="Information To Add" />
+                 </div>
+                <p>Next, you will see a page with a video explaining Metamask. You can either choose to watch it or click next.</p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={vid} height="350" alt="Information To Add" />
+                 </div>
+                <p>    Then, you'll be led to a page which gives you a secret recovery phrase. You'll have to click on the shaded box to see the phrase</p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={sec1} height="350" alt="Information To Add" />
+                    
+                    <img src={sec2} height="350" alt="Information To Add" />
+         
+                 </div>
                 <p>The secrete recovery phrase is very important. If you lose this, you will lose access to your wallet and won't be able to log back in. Make sure
                     to write it down and store it some place only you know so you can get back into your wallet if need be. Don't lose this phrase or give it to anyone else. 
                 </p>
-                <p>You will then be prompted to re-enter your recovery phrase to ensure that you indeed have it written down. Once you hit "confirm" then "all done", you are all set
+                <p>You will then be prompted to re-enter your recovery phrase to ensure that you indeed have it written down. </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={confirm} height="350" alt="Information To Add" />
+                    <img src={confirm2} height="350" alt="Information To Add" />
+
+                 </div>
+                <p>Once you hit  "all done", you are all set
                     and have created a Metamask wallet! Congrats!!
                 </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={done} height="350" alt="Information To Add" />
+                </div>
+                <br/>
+                <p>When logging back on to the application, you will likely need to log back into metamask using your password, so remember it!</p>
                 <h2 style={{textAlign: 'center'}}>Enable Test Networks: </h2>
                 <p>Back on the Metamask extension, to use the Goerli Network (where the contract is written) you need to enable test networks. 
                     First, when in Metamask, you should see your icon circle in the top right-hand corner. When clicking on it, at the bottom of the dropdown should be a settings icon.
@@ -149,14 +208,7 @@ class Tutorials extends Component{
                     </p>
                 <h2 style={{textAlign: 'center'}}>View your WMB tokens on Metamask</h2>
                     <p>-----Do this once contract is deployed on polygon network</p>
-                <h2 style={{textAlign: 'center'}}>View and send NFTs</h2>
-                    <p>Your NFTs earned on these site can be found in your wallet. Since the current tokens are on 
-                        the goerli network, you will need to connect to the contract address and know what the token ID is.
-                        You will also be able to see your tokens on openSea at 
-                        <a href = 'https://testnets.opensea.io/account' target="_blank" rel="noreferrer" >The Opensea testnet site</a>
-                        <p> To see your tokens here you need to connect your wallet to OpenSea.</p>
-                        <a href = 'https://testnets.opensea.io/collection/wmbtoken' target="_blank" rel="noreferrer" >The entire WMB collection in circulation can be viewed here.</a>
-                    </p>
+                
                 
                 <hr/>
                 <p> Below is for connecting to the polygon mainnet. You don't need to do this yet. This is for when the contract is deployed on a mainnet.</p>

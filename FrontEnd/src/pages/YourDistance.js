@@ -89,7 +89,8 @@ const YourDistance = (props) => {
             <h2>Run / Walk total distance: {runWalkDistance}</h2>
             <h3>{returnMessage}</h3>
             {loading && <CircularProgress style={{color: '#bdbdbd'}}/>}
-            {loading && <p style={{color: '#bdbdbd'}}>Please Wait for this transaction to confirm on the blockchain…</p>}
+            {loading && <p style={{color: '#bdbdbd'}}>Please wait for this transaction to confirm on the blockchain…</p>}
+            {loading && <p style={{color: '#bdbdbd'}}>You may need to confirm the transaction twice if you have earned a token.</p>}
 
             <br/>
             <h4> Latest Activities:</h4>
@@ -100,7 +101,7 @@ const YourDistance = (props) => {
                 <p>{threelatestRun} km ~ {threetTitle}</p>
             
             
-            { errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
+            { errorMessage && <Alert severity='error'> { errorHandle(errorMessage) } </Alert> }
             <br/>
             <Button color="inherit" href='/walk'> &lt; &lt; Back to Account Page</Button>
         </div>

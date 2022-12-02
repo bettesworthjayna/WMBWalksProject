@@ -5,13 +5,13 @@ const fs = require("fs-extra");
 const buildPath = path.resolve(__dirname, "build");
 fs.removeSync(buildPath);
  
-const tokenPath = path.resolve(__dirname, "Contract", "wmbWalks.sol");
+const tokenPath = path.resolve(__dirname, "Contract", "wmbFit.sol");
 const source = fs.readFileSync(tokenPath, "utf8");
  
 const input = {
   language: "Solidity",
   sources: {
-    "wmbToken.sol": {
+    "wmbFit.sol": {
       content: source,
     },
   },
@@ -25,7 +25,7 @@ const input = {
 };
  
 const output = JSON.parse(solc.compile(JSON.stringify(input))).contracts[
-  "wmbToken.sol"
+  "wmbFit.sol"
 ];
  
 fs.ensureDirSync(buildPath);

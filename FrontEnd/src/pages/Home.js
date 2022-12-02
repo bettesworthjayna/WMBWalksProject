@@ -29,7 +29,7 @@ class WMBIndex extends Component {
                 <h1>WMB Fit</h1>
                 <hr/>
                <p>Connect your Metamask account to access your tokens and progress on this application</p>
-               <p>Make sure your wallet is connected to your Metamask Account</p>
+               <p>Make sure your wallet is connected to the Goerli Test Network</p>
                <p>Sign up by connecting to Strava in the account section and record walks, runs, or hikes to earn tokens</p>
                <p> Need help with any of these tasks? </p>
                <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
@@ -38,22 +38,10 @@ class WMBIndex extends Component {
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
                  
                 <hr/>
-                <h2>Potential Awards</h2>
+                <h2>NFT Prizes</h2>
+                <p>Walking or running gives you NFTs and the following NFTs gives you rewards.</p>
                 <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    <div >
-                        <hr/>
-                        <p>Walk 5 km total:</p>
-                        <p> - </p>
-                        <img  src={Walk5} height='150'  alt="walk 100" />
-                        
-                    </div>
-                    <div>
-                        <hr/>
-                        <p>Walk 10 km total:</p>
-                        <p> - </p>
-                        <img  src={Walk10} height='150' alt="walk 100" />
-                        
-                    </div>
+                    
                     <div>
                         <hr/>
                         <p>Walk 100 km total:</p>
