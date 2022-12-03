@@ -33,7 +33,7 @@ class WMBIndex extends Component {
                <p>Sign up by connecting to Strava in the account section and record walks, runs, or hikes to earn tokens</p>
                <p> Need help with any of these tasks? </p>
                <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
-                <h3>Token Name: {this.state.name}, </h3>
+                <h3>Token Name: {this.state.name} </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
                  
