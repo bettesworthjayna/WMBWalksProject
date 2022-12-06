@@ -30,7 +30,6 @@ export const mineTokens = async (amount) => {
               console.log(error + "   ");
           });
       };
-    
 
     if(startDate == 0){
         await token.methods.mint(0).send({
@@ -43,8 +42,13 @@ export const mineTokens = async (amount) => {
             from: accounts[0],
         });
 
-    }else{
+    }else if (mineAmount < 0) {
+        await token.methods.burn(-1 * mineAmount).send({
+            from: accounts[0],
+        });
         return "No new km recorded since last logged in. "
+    }else{
+        return"No new km recorded since last logged in. "
     }
     const AfterBalance = await token.methods.balanceOf(accounts[0]).call();
     if(AfterBalance < 500){

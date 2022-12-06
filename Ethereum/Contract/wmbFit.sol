@@ -25,11 +25,11 @@ interface IERC20 {
     event Approval(address indexed owner, address indexed spender, uint amount);
 }
 
-contract wmbToken is IERC20 {
+contract wmbFit is IERC20 {
     uint public totalSupply;
     mapping(address => uint) public balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
-    string public name = "WMBWalks";
+    string public name = "WMBFit";
     string public symbol = "WMB";
     uint8 public decimals = 2;
     mapping(address => uint) public startDate;
@@ -52,7 +52,7 @@ contract wmbToken is IERC20 {
     //these functions are simple enough and the solidity compiler recognises then as commands
 
     function transfer (address recipient, uint amount) external returns (bool){
-        require(amount <= 10, "Maximum transfer of 0.1 WMB Tokens");
+        require(amount <= 10, "Maximum transfer of 0.1");
         balanceOf[msg.sender] -= amount;
         balanceOf[recipient] += amount;
         emit Transfer(msg.sender, recipient, amount);
@@ -60,7 +60,7 @@ contract wmbToken is IERC20 {
     }
 
     function approve(address spender, uint amount) external returns (bool){
-        require(amount <= 100,  "Maximum approval of 1 WMB Tokens");
+        require(amount <= 100,  "Maximum approval of 1");
         allowance[msg.sender][spender] = amount;
         emit Approval(msg.sender, spender, amount);
         return true;
@@ -71,7 +71,7 @@ contract wmbToken is IERC20 {
     }
 
     function transferFrom(address sender, address recipient, uint amount) external returns (bool){
-        require(amount <= 10,  "Maximum transfer of 0.1 WMB Tokens");
+        require(amount <= 10,  "Maximum transfer of 0.1");
         allowance[sender][msg.sender] -= amount;
         balanceOf[sender] -= amount;
         balanceOf[recipient] += amount;
@@ -117,6 +117,24 @@ contract wmbToken is IERC20 {
         balanceOf[msg.sender] -= amount;
         totalSupply -= amount;
         emit Transfer(msg.sender, address(0), amount);
+        downgradeLeader(balanceOf[msg.sender], msg.sender);
+    }
+    
+    function downgradeLeader(uint newDistance, address accountAdd) private {
+        scores memory cur = scores({accountAddress : accountAdd, accountName: personName[accountAdd], distance: newDistance});
+        uint8 i = 9;
+        while(i >= 0){
+            if(leaders[i].accountAddress == accountAdd){
+                leaders[i] = cur;
+                return;
+            }
+            if(leaders[i].distance > cur.distance){
+                scores memory temp = leaders[i];
+                leaders[i] = cur;
+                cur = temp;
+            }
+            i--;
+        }
     }
     
 

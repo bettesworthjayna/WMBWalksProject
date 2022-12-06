@@ -206,36 +206,21 @@ class Tutorials extends Component{
                     <p>You should click "Next" then "Connect". Back on Opensea you will then see a "Welcome to Opensea" popup in which you should press "accept and sign".
                         You will also need to sign on the Metamask pop up.
                     </p>
-                <h2 style={{textAlign: 'center'}}>View your WMB tokens on Metamask</h2>
-                    <p>-----Do this once contract is deployed on polygon network</p>
-                
-                
-                <hr/>
-                <p> Below is for connecting to the polygon mainnet. You don't need to do this yet. This is for when the contract is deployed on a mainnet.</p>
-                <h2 style={{textAlign: 'center'}}>Connect to pollygon network</h2>
-                    <p>The contract is going to be mined on the polygon network - in the future - Before you can use and mine tokens, you have to connect to the polygon network. To do this, you first need to open your Metamask extension</p>
-                    <p>Next, at the top of the Metamask page, you should see a tab showing the Ethereum network. 
-                        Click on that dropdown to show all networks that your connected to
+
+                    <br/>
+                    <h2 style={{textAlign: 'center'}}>Crop Your Runs on Strava</h2>
+                    <p>If you accidently record strava activities when you shouldnt be (for example if you drive home and forget to turn off the app) 
+                        you should crop your acctivity. This is important since you earn tokens based on your activity distance and if half of your activity
+                        is in a car, you wont be earning tokens honestly. </p>
+                    <p>
+                        Any suspisious gain in WMB tokens will be questioned, and you might need to show your strava app to justify your gain in points.
                     </p>
-                    <br/>
-                    <div style={{textAlign: 'center'}}>
-                    <img src={AddNetwork} height="400" alt="Add Network" />
-                    </div>
-                    <p> Click on "Add network" at the bottom of the page</p>
-                    <p> From here you should see a page to enter information about your desired network</p>
-                    <div style={{textAlign: 'center'}}>
-                    <img src={Information} height="450" alt="Information To Add" />
-                    </div>
-                    <p>Add in the text boxes the information you see on the above picture</p>
-                    <p>Network name: Polygon</p>
-                    <p>New RPC URL: https://polygon-rpc.com</p>
-                    <p>Chain ID: 137</p>
-                    <p>Currency Symbol: MANTIC</p>
-                    <p>Block Explorer URL: https://polygonscan.com/</p>
-                    <br />
-                    <p>Next press save to save the network</p>
-                    <br/>
-                    <p>Now you should be connected to the polygon network and be able to use it! </p>
+                    <p>To learn how to crop runs on strava, go to this link:&nbsp;
+                    <a href='https://support.strava.com/hc/en-us/articles/216919437-Crop-Tool-for-Activities' target="_blank" rel="noreferrer">Strava Support</a>
+                    </p>
+                                
+                <hr/>
+                
             </div>
             
         )

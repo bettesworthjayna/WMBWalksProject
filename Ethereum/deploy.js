@@ -1,6 +1,6 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const Web3 = require("web3");
-const compiledToken = require("./build/wmbToken.json");
+const compiledToken = require("./build/wmbFit.json");
  
 const provider = new HDWalletProvider(
     'fever merge snap duck marriage nasty ankle fame grace air junk bitter',
@@ -17,7 +17,7 @@ const deploy = async () => {
  
   const result = await new web3.eth.Contract(compiledToken.abi)
     .deploy({ data: compiledToken.evm.bytecode.object })
-    .send({ gas: "2000000", from: accounts[0] });
+    .send({ gas: "2500000", from: accounts[0] });
  
   console.log("Contract deployed to", result.options.address);
   provider.engine.stop();
