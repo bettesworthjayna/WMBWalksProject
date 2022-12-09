@@ -61,19 +61,19 @@ export const getTotalActivityDistance = async (activities, startDate) => {
     return distance;
 }
 
-export const latestActivity = async (activities, startDate) => {
-    if(startDate == 0){
-        return 0;
-    }
-    if(activities.length > 0){
-        let distance = 0;
-        distance = activities[(activities.length - 1)].distance;
-        console.log(activities[(activities.length - 1)].distance);
-        return 0;
-    }else{
-        return 0;
-    }
-}
+// export const latestActivity = async (activities, startDate) => {
+//     if(startDate == 0){
+//         return 0;
+//     }
+//     if(activities.length > 0){
+//         let distance = 0;
+//         distance = activities[(activities.length - 1)].distance;
+//         console.log(activities[(activities.length - 1)].distance);
+//         return 0;
+//     }else{
+//         return 0;
+//     }
+// }
 //this gets an array of all the users activities after a certain data
 export const getUserActivityArray = async (after, page, per_page, accessToken) => {
     try{

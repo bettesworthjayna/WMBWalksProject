@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import token from '../EtherConnect/token';
-import Walk10 from '../images/10kmWMB.PNG';
-import Walk5 from '../images/5kmWMB.PNG';
-import Walk100 from '../images/100kmWMB.PNG';
-import Walk500 from '../images/500kmWMB.PNG';
-import Walk1000 from '../images/1000kmWMB.PNG';
-import Walk10000 from '../images/10000kmWMB.PNG';
 import  Button from '@mui/material/Button';
 import Leaderboard  from '../utils/leaderboard';
 
@@ -35,47 +29,21 @@ class WMBIndex extends Component {
                <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
                 <h3>Token Name: {this.state.name} </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
-                <h3> Current Total Supply: {this.state.totalSupply / 100}</h3>
+                {/*<h3> Current Total Supply: {this.state.totalSupply / 100}</h3>*/}
                  
                 <hr/>
+                <br/>
+                <Leaderboard />  
+
                 <h2>NFT Prizes</h2>
                 <p>Walking or running gives you NFTs and the following NFTs gives you rewards.</p>
-                <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    
-                    <div>
-                        <hr/>
-                        <p>Walk 100 km total:</p>
-                        <p>        Win some comfy socks!</p>
-                        <img  src={Walk100} height='150' alt="walk 100" />
-                        
-                    </div>
-                    <div>
-                        <hr/>
-                        <p>Walk 500 km total:</p>
-                        <p>Win a water bottle!</p>
-                        <img  src={Walk500} height='150' alt="walk 500" />
-                        
-                    </div>
-                    <div>
-                        <hr/>
-                        <p>Walk 1000 km total:</p>
-                        <p>Win a free lunch!</p>
-                        <img  src={Walk1000} height='150' alt="walk 1000" />
-                       
-                    </div>
-
-                    <div>
-                        <hr/>
-                        <p>Walk 10,000 km total:</p>
-                        <p>Win a vacation day!</p>
-                        <img  src={Walk10000} height='150' alt="walk 10000" />
-                        
-                    </div>
-                </div>
+                <p>For more information go to the  
+                    <a href="/about" target="_blank" rel="noreferrer"> About Page </a>
+                </p>
                 <br/>
                 <hr/>
                 <br/>
-                <Leaderboard />            
+                          
 
             </div>
 

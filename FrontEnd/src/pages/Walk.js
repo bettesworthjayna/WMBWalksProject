@@ -84,20 +84,10 @@ class Walk extends Component {
             <div style={{textAlign: 'center'}}>
                  { this.state.errorMessage && <Alert severity='error'> { errorHandle(this.state.errorMessage) } </Alert> }
                 <h2>{ (this.state.contractName )|| ((this.state.account).substring(0, 12) + '...') }'s Account:</h2>
-                <h3>Token Name: {this.state.name}, </h3>
-                <h3>Token Symbol: {this.state.symbol}, </h3>
+                <h3>Token Name: {this.state.name} </h3>
+                <h3>Token Symbol: {this.state.symbol} </h3>
                 <h3>Your Total Supply: {this.state.myBalance}</h3>
                 <br/>
-                <div style={{backgroundColor: '#b3e5fc', paddingBottom: '10px',  maxWidth: '350px', margin: '0 auto', boxShadow: '5px 5px #e1f5fe'}}>
-                    <h3>Connect to Strava to mine new tokens</h3>
-                    <p>(Update your Balance)</p>
-                    <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect</Button>
-                    <br/>
-                </div>
-
-                <h2>Your NFTs:</h2>
-                <RewardNFT/>
-
                 <form onSubmit={this.onNameSubmit}>
                     <div>
                     <h3>Change Name:</h3>
@@ -108,11 +98,22 @@ class Walk extends Component {
                     />
                     </div>
                     <br/>
-                    {this.state.loading && <CircularProgress style={{color: '#bdbdbd'}}/>}
-                    <LoadingButton type="submit" loading={this.state.loading} fullWidth='true' loadingIndicator="Please Wait for this transaction to confirm on the blockchain…" >
+                    {/* {this.state.loading && <CircularProgress style={{color: '#bdbdbd'}}/>} */ /*loadingIndicator="Please Wait for this transaction to confirm on the blockchain…"*/}
+                    <LoadingButton type="submit" loading={this.state.loading} fullWidth='true'  >
                         Submit
                     </LoadingButton>
+                    { this.state.loading && <p  style={{color: '#bdbdbd'}}>Please Wait for this transaction to confirm on the blockchain… </p>}
                 </form>
+                <br/>
+                <div style={{backgroundColor: '#b3e5fc', paddingBottom: '10px',  maxWidth: '350px', margin: '0 auto', boxShadow: '5px 5px #e1f5fe'}}>
+                    <h3>Connect to Strava to mine new tokens</h3>
+                    <p>(Update your km balance from Strava)</p>
+                    <Button variant="outlined" style={{color: '#ffffff', backgroundColor: '#1a237e'}} onClick={handleLogin} >Connect</Button>
+                    <br/>
+                </div>
+
+                <h2>Your NFTs:</h2>
+                <RewardNFT/>
                
                 
             </div>

@@ -1,7 +1,5 @@
-import { textAlign } from '@mui/system';
 import { useEffect, useState } from 'react';
 import token from '../EtherConnect/token';
-import web3 from '../EtherConnect/web3';
 
 const Leaderboard =  () => {
         const [first, setFirst] = useState({});
@@ -15,21 +13,24 @@ const Leaderboard =  () => {
         const [eight, setEight] = useState({});
         const [nine, setNine] = useState({});
         const [ten, setTen] = useState({});
-    useEffect(async () => {
-        setFirst(await token.methods.leaders(0).call());
-        setSecond(await token.methods.leaders(1).call());
-        setThird(await token.methods.leaders(2).call());
-        setFourth( await token.methods.leaders(3).call());
-        setFifth(await token.methods.leaders(4).call());
-        setNumUsers(await token.methods.numberOfUsers().call());
+    useEffect( () => {
+        async function fetchData () {
+            setFirst(await token.methods.leaders(0).call());
+            setSecond(await token.methods.leaders(1).call());
+            setThird(await token.methods.leaders(2).call());
+            setFourth( await token.methods.leaders(3).call());
+            setFifth(await token.methods.leaders(4).call());
+            setNumUsers(await token.methods.numberOfUsers().call());
 
-        if (numUsers != null && numUsers > 10){
-            setSix(await token.methods.leaders(5).call());
-            setSeven(await token.methods.leaders(6).call());
-            setEight(await token.methods.leaders(7).call());
-            setNine( await token.methods.leaders(8).call());
-            setTen(await token.methods.leaders(9).call());
+            if (numUsers != null && numUsers > 10){
+                setSix(await token.methods.leaders(5).call());
+                setSeven(await token.methods.leaders(6).call());
+                setEight(await token.methods.leaders(7).call());
+                setNine( await token.methods.leaders(8).call());
+                setTen(await token.methods.leaders(9).call());
+            }
         }
+        fetchData();
     });
 
    

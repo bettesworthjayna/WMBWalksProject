@@ -36,27 +36,26 @@ class Tutorials extends Component{
             <div style={{textAlign: 'left', maxWidth: '650px', margin: '0 auto'}}>
                 <h1 style={{textAlign: 'center'}}>Tutorials</h1>
                 <p>What to complete before using the app:</p>
-                <div style={{textAlign: 'left', maxWidth: '550px', margin: '0 auto'}}>
+                
                 <ol >
                     <li>&emsp; Install the Metamask extension on your web browser and create a wallet</li>
                     <li>&emsp; Enable testnets to be shown on Metamask</li>
                     <li>&emsp; Navigate to the Goerli network on your Metamask</li>
-                    <li>&emsp; Put Goerli Ether into your account from a Goerli faucet. You need to do this &emsp; before making a transaction</li>
+                    <li>&emsp; Put Goerli Ether into your account from a Goerli faucet. You need to do this before making &emsp; a transaction</li>
                     <li>&emsp; Connect your Metamask account to the application</li>
                     <li>&emsp; Log into strava</li>
-                    <li>&emsp; Now you're all set. You can go on to the "Account" page of this application &emsp; and mine new tokens.</li>
+                    <li>&emsp; Now you're all set. You can go on to the "Account" page of this application and mine new &emsp; tokens.</li>
                 </ol>
                 <p>How to use the application</p>
                 <ol >
                     <li>&emsp; Go to the account page </li>
-                    <li>&emsp; Press ‘connect’ in the box that says “Connect to Strava to Mine New &emsp; Tokens” </li>
+                    <li>&emsp; Press ‘connect’ in the box that says “Connect to Strava to Mine New Tokens” </li>
                     <li>&emsp; Press authorize</li>
                     <li>&emsp; press confirm when a metamask pop up appears</li>
-                    <li>&emsp; Wait for the application to confirm the transaction (this is because the &emsp; &emsp; application is on a blockchain meaning it takes a long time to load transactions)</li>
-                    <li>&emsp; The website will then update depending on how many km you have run or &emsp; walked and reward you with WMB tokens and NFTs accordingly.</li>
+                    <li>&emsp; Wait for the application to confirm the transaction (this is because the application is on a &emsp; &emsp;&nbsp;blockchain meaning it takes a long time to load transactions)</li>
+                    <li>&emsp; The website will then update depending on how many km you have run or  walked and &emsp; &emsp;&nbsp;reward you with WMB tokens and NFTs accordingly.</li>
                     <li>&emsp; The next time you go on a walk, repeat this process again!</li>
                 </ol>
-                </div>
                 <p>For more detailed instructions, read below:</p>
                 
                 <h2 style={{textAlign: 'center', margin: '0 auto'}}>Install Metamask Extension</h2>

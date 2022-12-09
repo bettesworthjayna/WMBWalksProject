@@ -3,7 +3,6 @@ import web3 from '../EtherConnect/web3';
 import { giveNFT } from './giveNFTs';
 import emailjs from '@emailjs/browser';
 
-const { SERVICE, TEMPLATE, KEY } = process.env;
 
 //When mining tokens, this functions determines the amount of new tokens needed to be mined 
 //based of the amount of km that they have ran
@@ -55,12 +54,11 @@ export const mineTokens = async (amount) => {
         
         return `Congrats, you have ran ${mineAmount/100} km since you've last checked in`
     }
-    if(AfterBalance > 500 && OGBalance < 500){
-        if (AfterBalance > 1000){
+    if(AfterBalance >= 500 && OGBalance < 500){
+        if (AfterBalance >= 1000){
             await giveNFT(10);
 
             await giveNFT(5);
-
             return "Congrats, you have walked a cumulative of 10km. You have recieved the 5km and the 10km NFT!"
         }
         await giveNFT(5);
@@ -69,39 +67,89 @@ export const mineTokens = async (amount) => {
             // sendEmail();
          return "Congrats, you have walked a cumulative of 5km. You have recieved the 5km NFT!"
     }
-    if(AfterBalance > 1000 && OGBalance < 1000){
+    if(AfterBalance >= 1000 && OGBalance < 1000){
         await giveNFT(10);
-        console.log('yo buddy')
         return "Congrats, you have walked a cumulative of 10km. You have recieved the 10km NFT"
     }
     
-    if(AfterBalance > 10000 && OGBalance < 10000){
+    if(AfterBalance >= 2500 && OGBalance < 2500){
+        await giveNFT(25);
+        return "Congrats! You have walked more than 25km total!  You have recieved the 25km NFT"
+    }
+    if (AfterBalance >= 5000 && OGBalance <5000){
+        await giveNFT(50);
+        return "Congrats! You have walked more than 50km total!  You have recieved the 50km NF"
+    }
+    if (AfterBalance >= 7500 && OGBalance < 7500){
+        await giveNFT(75);
+        return "Congrats! You have walked more than 75km total! You have earned the 75km NFT "
+    }
+    if (AfterBalance >= 10000 && OGBalance < 10000){
         await giveNFT(100);
-            template.distance = 100;
-            template.prize = "socks"
-            sendEmail();
-        return "Congrats! You have walked more than 100 total! You now have a free waterbottle NFT and can cash it in at any time"
+        return "Congrats! You have walked more than 100km total! You have earned the 100km NFT"
     }
-    if (AfterBalance > 50000 && OGBalance <50000){
+    if (AfterBalance >= 15000 && OGBalance < 15000){
+        await giveNFT(150);
+        return "Congrats! You have walked more than 150km total! You have earned the 150km NFT "
+    }
+    if (AfterBalance >= 20000 && OGBalance < 20000){
+        await giveNFT(200);
+        return "Congrats! You have walked more than 200km total!  You have recieved the 200km NF"
+    }
+    if (AfterBalance >= 25000 && OGBalance < 25000){
+        await giveNFT(250);
+
+        template.distance = 250;
+        template.prize = "a water bottle"
+         sendEmail();
+        return (<div><h3>Congrats! You have walked more than 250km total! You have earned the 250km NFT </h3><p>Now you can qualify to earn a Water Bottle by the end of April. Continue to run or walk to earn running shoe or vacation day instead!</p></div>)
+    }
+    if (AfterBalance >= 30000 && OGBalance < 30000){
+        await giveNFT(300);
+        return "Congrats! You have walked more than 300km total! You have earned the 300km NFT "
+    }
+    if (AfterBalance >= 35000 && OGBalance < 35000){
+        await giveNFT(350);
+        return "Congrats! You have walked more than 350km total! You have earned the 350km NFT "
+    }
+    if (AfterBalance >= 40000 && OGBalance < 40000){
+        await giveNFT(400);
+        return "Congrats! You have walked more than 400km total! You have earned the 400km NFT "
+    }
+     if (AfterBalance >= 45000 && OGBalance < 45000){
+        await giveNFT(450);
+        return "Congrats! You have walked more than 450km total! You have earned the 450km NFT"
+    }
+
+     if (AfterBalance >= 50000 && OGBalance < 50000){
         await giveNFT(500);
-            template.distance = 500;
-            template.prize = "waterbottle"
-            sendEmail();
-        return "Congrats! You have walked more than 500 total! You now have a free comfy socks NFT and can cash it in at any time!"
+        template.distance = 500;
+        template.prize = "A pair of running shoes or a Yoga Mat"
+         sendEmail();
+        return  (<div><h3>Congrats! You have walked more than 500km total! You have earned the 500km NFT</h3><p>now you can qualify to earn a Yoga Mat or running shoes by the end of April. Continue to run or walk to earn vacation day instead!</p></div>)
     }
-    if (AfterBalance > 100000 && OGBalance < 100000){
+     if (AfterBalance >= 60000 && OGBalance < 60000){
+        await giveNFT(600);
+        return "Congrats! You have walked more than 600km total! You have earned a 600km NFT"
+    }
+    if (AfterBalance >= 70000 && OGBalance < 70000){
+        await giveNFT(700);
+        return "Congrats! You have walked more than 700km total! You have earned a 700km NFT"
+    }
+    if (AfterBalance >= 80000 && OGBalance < 80000){
+        await giveNFT(800);
+        return "Congrats! You have walked more than 800km total! You have earned a 800km NFT"
+    }
+    if (AfterBalance >= 90000 && OGBalance < 90000){
+        await giveNFT(900);
+        return "Congrats! You have walked more than 900km total! You have earned a 900km NFT"
+    }
+    if (AfterBalance >= 100000 && OGBalance < 100000){
         await giveNFT(1000);
-            template.distance = 1000;
-            template.prize = "lunch"
-            sendEmail();
-        return "Congrats! You have walked more than 1000 total! You now have a free lunch NFT and can cash it in at any time! "
-    }
-    if (AfterBalance > 1000000 && OGBalance < 1000000){
-        await giveNFT(10000);
-        template.distance = 10000;
-            template.prize = "VAYCAY!!"
-            sendEmail();
-        return "Congrats! You have walked more than 10000 total! You now have a vacation day NFT and can cash it in at any time! "
+        template.distance = 1000;
+        template.prize = "a Vacation Day"
+         sendEmail();
+        return (<div><h3>Congrats! You have walked more than 1000km total! You have earned a 1000km NFT</h3><p>Now you can qualify to earn a Vacation day</p></div>)
     }
     return `Congrats, you have walked ${mineAmount/100} since you last logged in`
 }
