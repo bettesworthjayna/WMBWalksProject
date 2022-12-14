@@ -3,7 +3,7 @@ export const URI_5km = 'QmdoSuEqNt2tiK5yyJg6TvJr8q4wKt7ywx6NJhiCHiUkrn/5km.json'
 //"QmeniirvgZXRf5TWUEz9LPiTjMqhH2nTC3FtnB3R3BeJuF";
 //"QmVEqxJe68aF6RPTH5Sddg9PcjPt5qU9LZ6rpbeE7ERrVQ/5kmWMB.PNG";
 
-export const URI_10km = "QmZMQvMXCjUgT7xzt77Kvybyy9mj1vE8D1MB8iJzFq9x4x/10kmWMB.json";
+export const URI_10km = "QmZMQvMXCjUgT7xzt77Kvybyy9mj1vE8D1MB8iJzFq9x4x/10km.json";
 
 export const URI_25km = 'QmdoSuEqNt2tiK5yyJg6TvJr8q4wKt7ywx6NJhiCHiUkrn/25km.json';
 
@@ -11,7 +11,7 @@ export const URI_50km = 'QmZMQvMXCjUgT7xzt77Kvybyy9mj1vE8D1MB8iJzFq9x4x/50km.jso
 
 export const URI_75km = 'QmdoSuEqNt2tiK5yyJg6TvJr8q4wKt7ywx6NJhiCHiUkrn/75km.json'
 
-export const URI_100km = "QmZMQvMXCjUgT7xzt77Kvybyy9mj1vE8D1MB8iJzFq9x4x/100km.json";
+export const URI_100km = "Qma184SGdrRzfXyDZiMrKRZ8DajiAb4WbHbmrvRm9kVZrF/100kmWMB.json";
 
 export const URI_150km = 'QmdoSuEqNt2tiK5yyJg6TvJr8q4wKt7ywx6NJhiCHiUkrn/150km.json';
 

@@ -48,9 +48,9 @@ class Tutorials extends Component{
                 </ol>
                 <p>How to use the application</p>
                 <ol >
-                    <li>&emsp; Go to the account page </li>
-                    <li>&emsp; Press ‘connect’ in the box that says “Connect to Strava to Mine New Tokens” </li>
-                    <li>&emsp; Press authorize</li>
+                    <li>&emsp; Go to the "my account" page </li>
+                    <li>&emsp; Press "connect" in the box that says “Connect to Strava to Mine New Tokens” </li>
+                    <li>&emsp; Press authorize on Srava page (or log into strava first)</li>
                     <li>&emsp; press confirm when a metamask pop up appears</li>
                     <li>&emsp; Wait for the application to confirm the transaction (this is because the application is on a &emsp; &emsp;&nbsp;blockchain meaning it takes a long time to load transactions)</li>
                     <li>&emsp; The website will then update depending on how many km you have run or  walked and &emsp; &emsp;&nbsp;reward you with WMB tokens and NFTs accordingly.</li>
@@ -81,7 +81,7 @@ class Tutorials extends Component{
                 <div style={{textAlign: 'center'}}>
                     <img src={start} height="350" alt="Information To Add" />
                  </div>
-                <p>Once you click "get started", you should choose to create a new Wallet
+                <p>Once you click "get started", you should choose to create a new wallet
                     unless you already have one that you want to use. (If using a wallet you already created, create a new account in your wallet so you don't accidently
                     spend any real money)
                 </p>
@@ -110,7 +110,7 @@ class Tutorials extends Component{
                 <p>The secrete recovery phrase is very important. If you lose this, you will lose access to your wallet and won't be able to log back in. Make sure
                     to write it down and store it some place only you know so you can get back into your wallet if need be. Don't lose this phrase or give it to anyone else. 
                 </p>
-                <p>You will then be prompted to re-enter your recovery phrase to ensure that you indeed have it written down. </p>
+                <p>You will then be prompted to re-enter your recovery phrase in order to ensure that you have it written down. </p>
                 <div style={{textAlign: 'center'}}>
                     <img src={confirm} height="350" alt="Information To Add" />
                     <img src={confirm2} height="350" alt="Information To Add" />

@@ -34,7 +34,7 @@ const Leaderboard =  () => {
     });
 
    
-    if(first.accountAddress != null && ten.accountAddress != null && numUsers > 10){
+    if(first.accountAddress != null && ten.accountAddress != null && numUsers > 20){
         return (
             <div style={{backgroundColor: '#fff59d', paddingBottom: '10px', maxWidth: '400px', margin: '0 auto', border: 'solid 5px #ffeb3b'}}>
                 <h2>Leaderboard:</h2>

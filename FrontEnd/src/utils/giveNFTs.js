@@ -13,11 +13,9 @@ export const giveNFT = async (reward) => {
     const accounts = await web3.eth.getAccounts();
     console.log('hello')
     if (reward == 5){
-        console.log('hi?')
         await NFT.methods.anyoneMint(accounts[0], URI_5km).send({
             from: accounts[0],
         });
-        console.log('did it work?')
     }else if (reward == 10){
         await NFT.methods.anyoneMint(accounts[0], URI_10km).send({
             from: accounts[0],
@@ -92,7 +90,7 @@ export const giveNFT = async (reward) => {
             from: accounts[0],
         });
     }else{
-        console.log(reward + " Whaaaaa")
+        console.log(reward )
     }
     
 

@@ -29,14 +29,14 @@ class WMBIndex extends Component {
                <Button color="success" href='/tutorials'> Go to Tutorials Page &gt; &gt;</Button>
                 <h3>Token Name: {this.state.name} </h3>
                 <h3>Token Symbol: {this.state.symbol} </h3>
-                {/*<h3> Current Total Supply: {this.state.totalSupply / 100}</h3>*/}
+                {/* <h3> Current Total Supply: {this.state.totalSupply / 100}</h3> */}
                  
                 <hr/>
                 <br/>
                 <Leaderboard />  
 
                 <h2>NFT Prizes</h2>
-                <p>Walking or running gives you NFTs and the following NFTs gives you rewards.</p>
+                <p>Walking or running gives you NFTs and the more you run or walk, the higher reward you qualify for.</p>
                 <p>For more information go to the  
                     <a href="/about" target="_blank" rel="noreferrer"> About Page </a>
                 </p>

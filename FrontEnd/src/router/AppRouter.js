@@ -7,6 +7,7 @@ import YourDistance from "../pages/YourDistance";
 import About from '../pages/About'
 import Tutorials from "../pages/Tutorials";
 import Layout from "../utils/Layout";
+import Admin from '../pages/Admin'
 
 
 //provides all the url paths. If wanting to add a new page to your website, do this here. 
@@ -23,6 +24,7 @@ class AppRouter extends React.Component {
                         <Route path="/about" component={About} />
                         <Route path='/walk' component={Walk} />
                         <Route path='/tutorials' component={Tutorials} />
+                        <Route path='/admin' component={Admin} />
                     </Switch>
                     </Layout>
                 </div>
