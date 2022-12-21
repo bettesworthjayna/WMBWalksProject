@@ -1,5 +1,5 @@
 const { REACT_APP_CLIENT_ID } = process.env;
-const redirectUrl = "http://localhost:3000/redirect" //"https://wmbfit.netlify.app/redirect"//
+const redirectUrl = "https://wmbfit.netlify.app/redirect"//
 
 //"https://splendid-ganache-ee2feb.netlify.app/redirect";
 // change above to "http://localhost:3000/redirect" in testing
