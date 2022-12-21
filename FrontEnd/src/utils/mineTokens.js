@@ -52,7 +52,7 @@ export const mineTokens = async (amount) => {
     const AfterBalance = await token.methods.balanceOf(accounts[0]).call();
     if(AfterBalance < 500){
         
-        return `Congrats, you have ran ${mineAmount/100} km since you've last checked in`
+        return `Congrats, you have accumulated ${mineAmount/100} km since you've last checked in`
     }
     if (AfterBalance >= 100000 && OGBalance < 100000){
         await giveNFT(1000);
@@ -90,72 +90,72 @@ export const mineTokens = async (amount) => {
     if(AfterBalance >= 500 && OGBalance < 500){
         if (AfterBalance >= 1000){
             await giveNFT(10);
-            return "Congrats, you have walked more than 10km. You have recieved the 10km NFT!"
+            return "Congrats, you have accumulated more than 10km. You have recieved the 10km NFT!"
         }
         await giveNFT(5);
-         return "Congrats, you have walked more than 5km. You have recieved the 5km NFT!"
+         return "Congrats, you have accumulated more than 5km. You have recieved the 5km NFT!"
     }
     if(AfterBalance >= 1000 && OGBalance < 1000){
         await giveNFT(10);
-        return "Congrats, you have walked more than 10km. You have recieved the 10km NFT"
+        return "Congrats, you have accumulated more than 10km. You have recieved the 10km NFT"
     }
     
     if(AfterBalance >= 2500 && OGBalance < 2500){
         
         await giveNFT(25);
-        return "Congrats! You have walked more than 25km total!  You have recieved the 25km NFT"
+        return "Congrats! You have accumulated more than 25km total!  You have recieved the 25km NFT"
     }
     if (AfterBalance >= 5000 && OGBalance <5000){
         await giveNFT(50);
-        return "Congrats! You have walked more than 50km total!  You have recieved the 50km NF"
+        return "Congrats! You have accumulated more than 50km total!  You have recieved the 50km NF"
     }
     if (AfterBalance >= 7500 && OGBalance < 7500){
         await giveNFT(75);
-        return "Congrats! You have walked more than 75km total! You have earned the 75km NFT "
+        return "Congrats! You have accumulated more than 75km total! You have earned the 75km NFT "
     }
 
     if (AfterBalance >= 15000 && OGBalance < 15000){
         await giveNFT(150);
-        return "Congrats! You have walked more than 150km total! You have earned the 150km NFT "
+        return "Congrats! You have accumulated more than 150km total! You have earned the 150km NFT "
     }
     if (AfterBalance >= 20000 && OGBalance < 20000){
         await giveNFT(200);
-        return "Congrats! You have walked more than 200km total!  You have recieved the 200km NF"
+        return "Congrats! You have accumulated more than 200km total!  You have recieved the 200km NF"
     }
 
     if (AfterBalance >= 30000 && OGBalance < 30000){
         await giveNFT(300);
-        return "Congrats! You have walked more than 300km total! You have earned the 300km NFT "
+        return "Congrats! You have accumulated more than 300km total! You have earned the 300km NFT "
     }
     if (AfterBalance >= 35000 && OGBalance < 35000){
         await giveNFT(350);
-        return "Congrats! You have walked more than 350km total! You have earned the 350km NFT "
+        return "Congrats! You have accumulated more than 350km total! You have earned the 350km NFT "
     }
     if (AfterBalance >= 40000 && OGBalance < 40000){
         await giveNFT(400);
-        return "Congrats! You have walked more than 400km total! You have earned the 400km NFT "
+        return "Congrats! You have accumulated more than 400km total! You have earned the 400km NFT "
     }
      if (AfterBalance >= 45000 && OGBalance < 45000){
         await giveNFT(450);
-        return "Congrats! You have walked more than 450km total! You have earned the 450km NFT"
+        return "Congrats! You have accumulated more than 450km total! You have earned the 450km NFT"
     }
 
      if (AfterBalance >= 60000 && OGBalance < 60000){
         await giveNFT(600);
-        return "Congrats! You have walked more than 600km total! You have earned a 600km NFT"
+        return "Congrats! You have accumulated more than 600km total! You have earned a 600km NFT"
     }
     if (AfterBalance >= 70000 && OGBalance < 70000){
         await giveNFT(700);
-        return "Congrats! You have walked more than 700km total! You have earned a 700km NFT"
+        return "Congrats! You have accumulated more than 700km total! You have earned a 700km NFT"
     }
     if (AfterBalance >= 80000 && OGBalance < 80000){
         await giveNFT(800);
-        return "Congrats! You have walked more than 800km total! You have earned a 800km NFT"
+        return "Congrats! You have accumulated more than 800km total! You have earned a 800km NFT"
     }
     if (AfterBalance >= 90000 && OGBalance < 90000){
         await giveNFT(900);
-        return "Congrats! You have walked more than 900km total! You have earned a 900km NFT"
+        return "Congrats! You have accumulated more than 900km total! You have earned a 900km NFT"
     }
     
-    return `Congrats, you have walked ${mineAmount/100} since you last logged in`
+    return `Congrats, you have accumulated ${mineAmount/100} since you last logged in`
 }

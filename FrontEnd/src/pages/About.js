@@ -25,10 +25,10 @@ class About extends Component{
                 <br/>
                 <p>Some Prizes you can qualify for:</p>
                 <ul>
-                    <li>If your cumulative total by the end of April 16th is between 100km - 249.99km you are eligable to recieve a pair of running socks</li>
-                    <li>If your cumulative total by the end of April 16th is between 250km - 499.99km you are eligable to recieve a waterbottle</li>
-                    <li>If your cumulative total by the end of April 16th is between 500km - 999.99km you are eligable to recieve 1 pair of running shoes (max. value: $200) OR a Lululemon Yoga Mat</li>
-                    <li>If your cumulative total by the end of April 16th is 1000km or higher, you are eligable to recieve 1 vacation day (to be used in the 2023)</li>
+                    <li>If your cumulative total by the end of April 16th is between 100km - 249.99km you are eligible to recieve a pair of running socks</li>
+                    <li>If your cumulative total by the end of April 16th is between 250km - 499.99km you are eligible to recieve a waterbottle</li>
+                    <li>If your cumulative total by the end of April 16th is between 500km - 999.99km you are eligible to recieve 1 pair of running shoes (max. value: $200) OR a Lululemon Yoga Mat</li>
+                    <li>If your cumulative total by the end of April 16th is 1000km or higher, you are eligible to recieve 1 vacation day (to be used in the 2023)</li>
                 </ul>
                 <p>For example, if you have run 720km by April 16th, you are eligable to choose one prize out of a pair of nunning socks, a waterbottle, running shoes, or a yoga mat. </p>
                 <h3>What you need</h3>

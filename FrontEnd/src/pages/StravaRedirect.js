@@ -46,8 +46,14 @@ class StravaRedirect extends React.Component {
 
                //axios request to get users activity array
                
-                const activities = await getUserActivityArray( startDate, 1, 200, accessToken); //that EPOTCH number will eventually need to be changed to when the user first signs up for the contract. 
-               
+                let activities = await getUserActivityArray( startDate, 1, 200, accessToken); //that EPOTCH number will eventually need to be changed to when the user first signs up for the contract. 
+                let i = 1;
+                while (activities.length >= (200*(i)) && i < 10){
+                    i++;
+                    let addActivities = await getUserActivityArray( startDate, i, 200, accessToken);
+                    activities = activities.concat(addActivities);
+
+                }
                 //get total distance in the array of all events:\
                // const distance = await getTotalActivityDistance(activities);
                 //console.log(distance)
